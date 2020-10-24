@@ -1,0 +1,4 @@
+@mixin  m-lr($ml, $mr) {
+    margin-left: $ml;
+    margin-right: $mr;
+}

@@ -1,0 +1,39 @@
+.btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer; 
+    font-family: inherit;
+
+
+    &--add {
+        background-color: $color-primary; 
+        height: 5rem;  
+        width: 5rem;
+        border-radius: 50%;
+        justify-self: end;
+        align-self: center;
+        text-align: center;
+
+        &__icon {
+            font-size: 3rem;
+            color: $color-white;
+        }
+    }
+    
+    &__room { 
+        grid-column: 1 / -1;
+        font-size: 1.6rem;
+        font-weight: 600;   
+        color: $color-white; 
+        text-transform: uppercase;
+        background-color: $color-primary;
+        padding: 1.8rem 3rem;
+        transition: all .3s;
+
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+}

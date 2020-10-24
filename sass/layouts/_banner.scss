@@ -1,0 +1,36 @@
+.banner {
+    grid-column: full-start / full-end;
+
+    background-image:linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__text-box {
+        position: absolute; 
+        top: 50%;
+        left: 35%; 
+        transform: translate(-50%, -50%);
+    }
+
+    &__info {
+       
+        font-size: 1.6rem;  
+        color: $color-white;
+        font-weight: 400;
+        text-transform: uppercase; 
+        margin-top: 2rem;
+
+        display: flex; 
+        align-items: center;
+   
+        &-rooms {  
+            margin-right: 1.5rem;   
+        }  
+
+        &-devices {
+
+        }
+
+    }
+}

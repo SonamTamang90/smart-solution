@@ -1,0 +1,22 @@
+{
+  "name": "smart-solution",
+  "version": "1.0.0",
+  "description": "Smart Home Solution",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SonamTamang90/smart-solution.git"
+  },
+  "author": "Sonam Tamang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SonamTamang90/smart-solution/issues"
+  },
+  "homepage": "https://github.com/SonamTamang90/smart-solution#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

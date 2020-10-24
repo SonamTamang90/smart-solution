@@ -1,0 +1,27 @@
+%heading {
+    font-family: $font-display;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 3.3rem;
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+}
+
+.heading-2 {
+    display: inline-block; 
+    font-size: 2rem;
+    color: $color-secondary;
+    text-transform: uppercase;
+    justify-self: start; 
+    align-self: center;
+} 
+
+.heading-3 {
+    display: block;
+    font-size: 1.6rem; 
+    color: $color-black; 
+    text-transform: uppercase;
+}
