@@ -60,14 +60,18 @@ body {
       font-size: 2.8rem;
       color: #fff; }
   .btn__room {
-    grid-column: 1 / -1;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #01baef;
-    padding: 1.5rem 3rem;
-    transition: all .3s; }
+    grid-column: 1 / -1; }
+    .btn__room:link, .btn__room:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #01baef;
+      padding: 1.5rem 3rem;
+      transition: all .3s; }
     .btn__room:hover {
       background-color: #05a7d4; }
   .btn__scenario {
@@ -134,6 +138,35 @@ body {
     align-items: center; }
     .banner__info-rooms {
       margin-right: 1.5rem; }
+
+.page-banner {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bedroom.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .page-banner__text-box {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%); }
+  .page-banner__info {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center; }
+    .page-banner__info-rooms {
+      margin-right: 1.5rem; }
+    .page-banner__info-devices {
+      display: flex;
+      align-items: center; }
+  .page-banner__icon {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #32CD32; }
 
 .header {
   background-color: #fff;

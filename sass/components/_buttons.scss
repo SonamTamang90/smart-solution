@@ -23,13 +23,21 @@
     
     &__room { 
         grid-column: 1 / -1;
-        font-size: 1.6rem;
-        font-weight: 600;   
-        color: $color-white; 
-        text-transform: uppercase;
-        background-color: $color-primary;
-        padding: 1.5rem 3rem;
-        transition: all .3s;
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 600;   
+            color: $color-white; 
+            text-transform: uppercase;
+            background-color: $color-primary;
+            padding: 1.5rem 3rem;
+            transition: all .3s;
+        }
+        
 
 
         &:hover {
