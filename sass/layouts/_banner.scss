@@ -77,3 +77,12 @@
         color: #32CD32;    
     }
 }
+
+@media only screen and (max-width:$bp-small) {
+    &__text-box {
+        position: absolute; 
+        top: 50%;
+        left: 38%; 
+        transform: translate(-50%, -50%);
+    }
+}

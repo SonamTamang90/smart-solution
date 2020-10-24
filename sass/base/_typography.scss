@@ -25,3 +25,20 @@
     color: $color-black; 
     text-transform: uppercase;
 }
+
+
+@media only screen and (max-width:$bp-small) {
+    .heading-1 {
+        font-size: 1.8rem;
+        letter-spacing: .2rem;
+        line-height: 1.7;
+        
+    }
+
+    .heading-3 {
+        font-size: 1.5rem; 
+        word-spacing: .2rem;
+        line-height: 1.7;
+        letter-spacing: .3rem;
+    }
+}

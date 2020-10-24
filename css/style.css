@@ -42,6 +42,17 @@ body {
   color: #000;
   text-transform: uppercase; }
 
+@media only screen and (max-width: 37.5em) {
+  .heading-1 {
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+    line-height: 1.7; }
+  .heading-3 {
+    font-size: 1.5rem;
+    word-spacing: .2rem;
+    line-height: 1.7;
+    letter-spacing: .3rem; } }
+
 .btn {
   display: inline-block;
   background: none;
@@ -85,6 +96,15 @@ body {
     transition: all .3s; }
     .btn__scenario:hover {
       background-color: #05a7d4; }
+
+@media only screen and (max-width: 37.5em) {
+  .btn__room {
+    grid-column: 1 / -1; }
+    .btn__room:link, .btn__room:visited {
+      font-size: 1.2rem;
+      padding: .5rem 3rem; }
+    .btn__room:hover {
+      background-color: #05a7d4; } }
 
 .devices {
   padding: 4rem 0;
@@ -144,6 +164,10 @@ body {
     display: flex;
     flex-direction: column; }
 
+@media only screen and (max-width: 37.5em) {
+  .temperature-box {
+    margin-top: 1rem; } }
+
 .banner {
   grid-column: full-start / full-end;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg");
@@ -194,6 +218,13 @@ body {
     display: inline-block;
     font-size: 1.6rem;
     color: #32CD32; }
+
+@media only screen and (max-width: 37.5em) {
+  __text-box {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%); } }
 
 .header {
   background-color: #fff;
@@ -249,6 +280,19 @@ body {
     width: 100%;
     grid-column: 1 / -1; }
 
+@media only screen and (max-width: 37.5em) {
+  .rooms {
+    grid-column: center-start / center-end;
+    padding: 6rem 0; }
+    .rooms__top {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+    .rooms__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      grid-gap: 1.2rem;
+      margin-top: 3rem; } }
+
 .scenarios {
   grid-column: center-start / center-end;
   padding: 6rem 0; }
@@ -300,3 +344,14 @@ body {
   display: grid;
   grid-template-rows: 7rem 48vh repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
+
+@media only screen and (max-width: 37.5em) {
+  .container {
+    max-width: 100%;
+    margin: 0; } }
+
+@media only screen and (max-width: 37.5em) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
