@@ -91,23 +91,22 @@ body {
   grid-column: center-start / center-end; }
   .devices__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 3rem; }
 
 .device {
-  width: 16rem;
-  height: 18rem;
   border: 1px solid #777;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr); }
+  grid-template-rows: repeat(3, min-content); }
   .device__icon {
     display: inline-block;
     font-size: 6rem;
     grid-column: 1 / -1;
     justify-self: center; }
   .device__title {
-    grid-column: 1 / 1;
-    grid-row: 2 / 3; }
+    grid-row: 2 / 3;
+    font-size: 1.6rem; }
   .device__room {
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
