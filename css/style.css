@@ -24,9 +24,10 @@ body {
   font-weight: 400; }
 
 .heading-1 {
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   color: #faf9f9;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: .2rem; }
 
 .heading-2 {
   display: inline-block;
@@ -38,13 +39,26 @@ body {
 
 .heading-3 {
   display: block;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #000;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: .2rem; }
 
 @media only screen and (max-width: 37.5em) {
   .heading-1 {
     font-size: 1.8rem;
+    letter-spacing: .2rem;
+    line-height: 1.7; }
+  .heading-3 {
+    font-size: 1.5rem;
+    word-spacing: .2rem;
+    line-height: 1.7;
+    letter-spacing: .3rem; } }
+
+@media only screen and (max-width: 75em) {
+  .heading-1 {
+    font-size: 1rem;
     letter-spacing: .2rem;
     line-height: 1.7; }
   .heading-3 {
@@ -107,31 +121,73 @@ body {
       background-color: #05a7d4; } }
 
 .devices {
-  padding: 4rem 0;
+  padding: 6rem 0;
   grid-column: center-start / center-end; }
   .devices__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-gap: 3rem; }
 
 .device {
-  border: 1px solid #777;
+  background-color: #fff;
+  border: 1px solid #b3b1b1;
+  border-radius: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, min-content); }
   .device__icon {
     display: inline-block;
-    font-size: 6rem;
+    font-size: 7rem;
+    color: #01baef;
     grid-column: 1 / -1;
+    grid-row: 1 / 1;
     justify-self: center; }
-  .device__title {
-    grid-row: 2 / 3;
-    font-size: 1.6rem; }
-  .device__room {
-    grid-column: 2 / 3;
+  .device__text {
+    grid-column: 1 / -1;
     grid-row: 2 / 3; }
+  .device__title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center; }
+  .device__room {
+    font-size: 1.6rem;
+    text-align: center; }
+  .device__status {
+    grid-column: 2 / 3;
+    justify-self: right;
+    padding: 2rem;
+    grid-row: 1 / 1;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    justify-items: center;
+    font-size: 1.6rem; }
+  .device__on {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .3rem;
+    color: #32CD32; }
+  .device__off {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: .3rem;
+    color: #f32626; }
   .device__delete {
-    grid-row: 3 / -1; }
+    grid-row: 3 / -1;
+    padding: 1rem 2rem;
+    background: none;
+    border: none; }
+    .device__delete i {
+      font-size: 2.2rem;
+      color: #01baef; }
+  .device__save {
+    padding: 1rem 2rem;
+    background: none;
+    border: none; }
+    .device__save i {
+      font-size: 2.2rem;
+      color: #01baef; }
 
 .temperature-box {
   margin-top: 2.8rem;
@@ -176,8 +232,8 @@ body {
   position: relative; }
   .banner__text-box {
     position: absolute;
-    top: 50%;
-    left: 38%;
+    top: 55%;
+    left: 32%;
     transform: translate(-50%, -50%); }
   .banner__info {
     font-size: 1.6rem;
@@ -198,8 +254,8 @@ body {
   position: relative; }
   .page-banner__text-box {
     position: absolute;
-    top: 50%;
-    left: 38%;
+    top: 55%;
+    left: 35%;
     transform: translate(-50%, -50%); }
   .page-banner__info {
     font-size: 1.6rem;
@@ -220,6 +276,13 @@ body {
     color: #32CD32; }
 
 @media only screen and (max-width: 37.5em) {
+  __text-box {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%); } }
+
+@media only screen and (max-width: 62.5em) {
   __text-box {
     position: absolute;
     top: 50%;
@@ -338,11 +401,12 @@ body {
     color: #faf9f9; }
 
 .container {
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.7);
   background-color: #EDEDED;
   max-width: 120rem;
   margin: 8rem auto;
   display: grid;
-  grid-template-rows: 7rem 48vh repeat(2, min-content);
+  grid-template-rows: 7rem 68vh repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
 
 @media only screen and (max-width: 37.5em) {

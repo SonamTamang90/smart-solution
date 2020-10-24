@@ -8,8 +8,8 @@
 
     &__text-box {
         position: absolute; 
-        top: 50%;
-        left: 38%; 
+        top: 55%;
+        left: 32%; 
         transform: translate(-50%, -50%);
     }
 
@@ -45,8 +45,8 @@
 
     &__text-box {
         position: absolute; 
-        top: 50%;
-        left: 38%; 
+        top: 55%;
+        left: 35%; 
         transform: translate(-50%, -50%);
     }
 
@@ -79,6 +79,16 @@
 }
 
 @media only screen and (max-width:$bp-small) {
+    &__text-box {
+        position: absolute; 
+        top: 50%;
+        left: 38%; 
+        transform: translate(-50%, -50%);
+    }  
+}
+
+
+@media only screen and (max-width:$bp-large) {
     &__text-box {
         position: absolute; 
         top: 50%;

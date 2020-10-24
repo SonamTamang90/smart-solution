@@ -5,9 +5,10 @@
 
 .heading-1 {
     @extend %heading;
-    font-size: 3.6rem;
-    color: $color-grey-light-1;
+    font-size: 2.8rem;
+    color: $color-grey-light-1; 
     text-transform: uppercase;
+    letter-spacing: .2rem;
 }
 
 .heading-2 {
@@ -21,9 +22,11 @@
 
 .heading-3 {
     display: block;
-    font-size: 2rem; 
+    font-size: 1.8rem; 
     color: $color-black; 
     text-transform: uppercase;
+    line-height: 2; 
+    letter-spacing: .2rem;
 }
 
 
@@ -31,6 +34,22 @@
     .heading-1 {
         font-size: 1.8rem;
         letter-spacing: .2rem;
+        line-height: 1.7;
+        
+    }
+
+    .heading-3 {
+        font-size: 1.5rem; 
+        word-spacing: .2rem;
+        line-height: 1.7;
+        letter-spacing: .3rem;
+    }
+}
+
+@media only screen and (max-width:$bp-largest) {
+    .heading-1 { 
+        font-size: 1rem;
+        letter-spacing: .2rem; 
         line-height: 1.7;
         
     }
