@@ -6,9 +6,11 @@
     <title>Smart Home &mdash; Manage Home Smartly</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container">
+<body>
+<div class="container">
     <header class="header">
         <div class="header__logo-box">
             <a href="#" class="header__logo">Smart Home</a>
@@ -39,12 +41,33 @@
     </header>
 
     <nav class="sidebar">
-        SIDEBAR
+        <ul class="sidebar__list">
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                    <i class="bx bx-home sidebar__icon"></i>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                    <i class='bx bx-grid-alt sidebar__icon'></i>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                    <i class='bx bx-message-rounded sidebar__icon'></i>
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link">
+                    <i class='bx bx-user sidebar__icon'></i>
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <section class="banner">
         <div class="banner__text-box">
-            <h3 class="heading-3">Hello, Sonam Tamang</h3>
+            <h3 class="heading-3 text-white">Welcome Sonam Tamang</h3>
             <h1 class="heading-1">Let's manage your smart home</h1>
             <div class="temperature-box">
                 <svg class="temperature-box__icon">
@@ -84,25 +107,30 @@
         </div>
     </section>
 
-    <section class="rooms">
-        <div class="rooms__top">
+    <section class="scenarios">
+        <div class="scenarios__top">
             <h2 class="heading-2">Your Favorite Scenarios</h2>
             <button class="btn btn--add"><i class="ion-ios-plus-empty btn--add__icon"></i></button>
         </div>
-        <div class="rooms__content">
-            <div class="room">
-                <img src="img/bedroom.jpg" alt="" class="room__photo">
-                <button class="btn btn__room">Bed Room</button>
+        <div class="scenarios__content">
+            <div class="scenario">
+                <img src="img/bedroom.jpg" alt="" class="scenario__photo">
+                <button class="btn btn__scenario">Get Up</button>
             </div>
-            <div class="room">
-                <img src="img/livingroom.jpg" alt="" class="room__photo">
-                <button class="btn btn__room">Living Room</button>
+            <div class="scenario">
+                <img src="img/livingroom.jpg" alt="" class="scenario__photo">
+                <button class="btn btn__scenario">Sleep</button>
             </div>
-            <div class="room">
-                <img src="img/bedroom (3).jpg" alt="" class="room__photo">
-                <button class="btn btn__room">Kitchen</button>
+            <div class="scenario">
+                <img src="img/bedroom (3).jpg" alt="" class="scenario__photo">
+                <button class="btn btn__scenario">Go Home</button>
+            </div>
+            <div class="scenario">
+                <img src="img/bedroom (3).jpg" alt="" class="scenario__photo">
+                <button class="btn btn__scenario">Go Home</button>
             </div>
         </div>
     </section>
+</div>
 </body>
 </html>

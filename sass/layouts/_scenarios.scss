@@ -1,4 +1,27 @@
-.scenerios {
-    background-color: lightcoral;
-    grid-column: center-start / center-end; 
+.scenarios {
+    grid-column: center-start / center-end;
+    padding: 6rem 0; 
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);     
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 3rem;
+        margin-top: 3rem;
+    }
+    
+}
+
+.scenario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__photo {
+        width: 100%; 
+        grid-column: 1 / -1;
+    }
 }

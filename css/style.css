@@ -1,3 +1,6 @@
+.text-white {
+  color: #fff !important; }
+
 *,
 *::before,
 *::after {
@@ -13,20 +16,21 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: #101d2c; }
+  color: #101d2c;
+  background-color: lightblue; }
 
 .heading-1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
 .heading-1 {
-  font-size: 3.3rem;
-  color: #f9f7f6;
+  font-size: 3.6rem;
+  color: #faf9f9;
   text-transform: uppercase; }
 
 .heading-2 {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #101d2c;
   text-transform: uppercase;
   justify-self: start;
@@ -34,7 +38,7 @@ body {
 
 .heading-3 {
   display: block;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #000;
   text-transform: uppercase; }
 
@@ -46,14 +50,14 @@ body {
   font-family: inherit; }
   .btn--add {
     background-color: #01baef;
-    height: 5rem;
-    width: 5rem;
+    height: 4.5rem;
+    width: 4.5rem;
     border-radius: 50%;
     justify-self: end;
     align-self: center;
     text-align: center; }
     .btn--add__icon {
-      font-size: 3rem;
+      font-size: 2.8rem;
       color: #fff; }
   .btn__room {
     grid-column: 1 / -1;
@@ -62,9 +66,20 @@ body {
     color: #fff;
     text-transform: uppercase;
     background-color: #01baef;
-    padding: 1.8rem 3rem;
+    padding: 1.5rem 3rem;
     transition: all .3s; }
     .btn__room:hover {
+      background-color: #05a7d4; }
+  .btn__scenario {
+    grid-column: 1 / -1;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #01baef;
+    padding: 1.5rem 3rem;
+    transition: all .3s; }
+    .btn__scenario:hover {
       background-color: #05a7d4; }
 
 .temperature-box {
@@ -91,7 +106,7 @@ body {
       display: inline-block;
       height: 3rem;
       width: .1rem;
-      background-color: #f9f7f6;
+      background-color: #faf9f9;
       margin-left: 1.5rem; }
   .temperature-box__humidity {
     font-size: 1.4rem;
@@ -107,7 +122,7 @@ body {
   .banner__text-box {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 38%;
     transform: translate(-50%, -50%); }
   .banner__info {
     font-size: 1.6rem;
@@ -122,7 +137,7 @@ body {
 
 .header {
   background-color: #fff;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #f4f2f2;
   grid-column: sidebar-start / full-end;
   display: flex;
   justify-content: space-between;
@@ -149,7 +164,7 @@ body {
   .user-nav__icon {
     width: 2rem;
     height: 2rem;
-    color: #101d2c; }
+    fill: #ccc; }
   .user-nav__user-photo {
     height: 3rem;
     width: 3rem;
@@ -174,17 +189,54 @@ body {
     width: 100%;
     grid-column: 1 / -1; }
 
-.scenerios {
-  background-color: lightcoral;
-  grid-column: center-start / center-end; }
+.scenarios {
+  grid-column: center-start / center-end;
+  padding: 6rem 0; }
+  .scenarios__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+  .scenarios__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    margin-top: 3rem; }
+
+.scenario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .scenario__photo {
+    width: 100%;
+    grid-column: 1 / -1; }
 
 .sidebar {
   background-color: #101d2c;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 2 / -1;
-  color: #fff; }
+  grid-row: 2 / -1; }
+  .sidebar__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 7rem; }
+  .sidebar__item {
+    margin-bottom: 4rem; }
+  .sidebar__link:link, .sidebar__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: .5rem;
+    padding: .8rem;
+    transition: all .3s; }
+  .sidebar__link:hover {
+    background-color: #01baef; }
+  .sidebar__icon {
+    font-size: 3rem;
+    color: #faf9f9; }
 
 .container {
+  background-color: #EDEDED;
+  max-width: 120rem;
+  margin: 8rem auto;
   display: grid;
-  grid-template-rows: 7rem 65vh repeat(2, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-rows: 7rem 48vh repeat(2, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }

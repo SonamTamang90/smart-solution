@@ -8,15 +8,15 @@
 
     &--add {
         background-color: $color-primary; 
-        height: 5rem;  
-        width: 5rem;
+        height: 4.5rem;  
+        width: 4.5rem;
         border-radius: 50%;
         justify-self: end;
         align-self: center;
         text-align: center;
 
         &__icon {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: $color-white;
         }
     }
@@ -28,7 +28,23 @@
         color: $color-white; 
         text-transform: uppercase;
         background-color: $color-primary;
-        padding: 1.8rem 3rem;
+        padding: 1.5rem 3rem;
+        transition: all .3s;
+
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+
+    &__scenario { 
+        grid-column: 1 / -1;
+        font-size: 1.6rem;   
+        font-weight: 600;   
+        color: $color-white; 
+        text-transform: uppercase;
+        background-color: $color-primary;
+        padding: 1.5rem 3rem;
         transition: all .3s;
 
 

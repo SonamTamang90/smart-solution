@@ -3,5 +3,38 @@
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
 
-    color: #fff;
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-items: center; 
+        align-items: center; 
+        margin-top: 7rem;
+    } 
+
+    &__item {
+        margin-bottom: 4rem;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            text-decoration: none;
+            border-radius: .5rem;
+            padding: .8rem;
+            transition: all .3s;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+        }
+
+    }
+
+    &__icon {
+        font-size: 3rem;
+        color: $color-grey-light-1;  
+    }
 }
