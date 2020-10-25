@@ -15,29 +15,30 @@
         <div class="header__logo-box">
             <a href="#" class="header__logo">Smart Home</a>
         </div>
-
-        <nav class="user-nav">
-            <ul class="user-nav__list">
-                <li class="user-nav__item">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-bell"></use>
-                    </svg>
-                </li>
-                <li class="user-nav__item">
-                    <a href="#" class="user-nav__link">
-                       <svg class="user-nav__icon">
-                           <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                       </svg>
-                    </a>
-                </li>
-                <li class="user-nav__item">
-                    <a href="#" class="user-nav__link">
-                        <img src="img/user.jpg" alt="Sonam Tamang" class="user-nav__user-photo">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-           
+        <div class="theme">
+            <button class="theme__button" id="theme-change">
+                <div class="theme__icon-box">
+                    <i class="ion-ios-sunny-outline theme__icon"></i>
+                </div>
+                <span class="theme__name">Light Theme</span>
+            </button>
+        </div>
+        <div class="user-nav">
+            <button class="user-nav__button" id="dropdown-panel">
+                <img src="img/user.jpg" alt="User Photo" class="user-nav__photo">
+                <i class='bx bx-chevron-down user-nav__icon'></i>
+            </button>
+            <div class="dropdown-panel">
+                <div class="dropdown-panel__user">
+                    <img src="img/user.jpg" alt="user" class="dropdown-panel__photo">
+                    <p class="dropdown-panel__name">Sonam Tamang</p>
+                </div>
+                <div class="dropdown-panel__cta">
+                    <button class="dropdown-panel--setting">Setting</button>
+                    <button class="dropdown-panel--signout">Sign out</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <nav class="sidebar">
@@ -54,11 +55,6 @@
             </li>
             <li class="sidebar__item">
                 <a href="#" class="sidebar__link">
-                    <i class='bx bx-message-rounded sidebar__icon'></i>
-                </a>
-            </li>
-            <li class="sidebar__item">
-                <a href="#" class="sidebar__link">
                     <i class='bx bx-user sidebar__icon'></i>
                 </a>
             </li>
@@ -67,8 +63,12 @@
 
     <section class="banner">
         <div class="banner__text-box">
-            <h3 class="heading-3 text-white">Welcome Sonam Tamang</h3>
-            <h1 class="heading-1">Let's manage your smart home</h1>
+            <!-- <h3 class="heading-3 text-white" id="animation">Welcome Sonam Tamang</h3>
+            <h1 class="heading-1">Let's manage your smart home</h1> -->
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Welcome Sonam Tamang</span>
+                <span class="heading-primary--sub">Let's manage your smart home</span>
+            </h1>
             <div class="temperature-box">
                 <svg class="temperature-box__icon">
                     <use xlink:href="img/sprite.svg#icon-cloud"></use>
@@ -132,5 +132,6 @@
         </div>
     </section>
 </div>
+<script type="application/javascript" src="js/app.js"></script>
 </body>
 </html>

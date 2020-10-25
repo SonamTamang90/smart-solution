@@ -5,10 +5,25 @@
     margin: 8rem auto;
     display: grid;  
     grid-template-rows: 7rem 68vh repeat(2, min-content);
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) 
+    grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(3rem, 1fr) 
                         [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end] ; 
                         
 }  
+
+.login { 
+   height: 100vh;
+   position: relative;
+}
+
+.login__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    padding: 6rem;
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .3);
+}
 
 @media only screen and (max-width:$bp-small) {
     .container {
@@ -25,6 +40,4 @@
         grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) 
         [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end] ; 
     }
-
-    
 }

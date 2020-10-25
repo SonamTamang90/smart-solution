@@ -60,6 +60,25 @@
             background-color: $color-primary-dark;
         }
     }
+
+    &--submit {
+        align-self: stretch;
+        background-color: $color-primary; 
+        padding: 1rem 4rem;
+        width: 100%;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-top: .5rem;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
 }
 
 

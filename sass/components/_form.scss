@@ -1,0 +1,138 @@
+.form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__logo {
+        font-size: 3.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+
+    &__group {
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    &__label {
+        display: inline-block;
+        font-family: inherit;
+        font-size: 1.4rem;
+        margin-bottom: .3rem; 
+        color: $color-secondary; 
+    }
+
+    &__input {
+        font-size: 1.3rem;
+        width: 100%;
+        padding: 1.2rem 2rem;   
+        border: 1px solid #EDEDED;
+        transition: all .3s; 
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1); 
+            border-bottom: 1.2px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 1.2px solid #ff7730;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        } 
+    }
+
+    &__checkbox {
+
+        &-group {
+            display: flex;
+            align-items: center;
+        }
+
+        &-input {
+            margin-right: .5rem;
+        }
+
+        &-label {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__signup {
+
+        &-question {
+            font-size: 1.1rem;
+
+            a:link,
+            a:visited {
+                font-family: inherit;
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-primary; 
+                font-weight: 800;
+                padding: 0 .5rem;
+            }
+        }
+
+        &-list {
+            margin-top: 1.5rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        &-item {
+            border: .1px solid #888787;
+            width: 10rem;
+            margin-right: .8rem; 
+        }
+
+    
+
+        &-link {
+            display: inline-block;
+            text-decoration: none;
+            padding: .3rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-secondary;
+            font-size: 1.2rem;
+
+            &:hover {
+                background-color: #f7f7f7;
+              
+            }
+        }
+
+        &-icon {
+            display: inline-block;
+            font-size: 2rem;
+            // color: $color-primary;
+            margin-right: .5rem;
+
+            &-1 {
+                color: $facebook;
+            }
+
+            &-2 {
+                color: $twitter;
+            }
+
+            &-3 {
+                color: $google; 
+            }
+        }
+    }
+
+   
+}

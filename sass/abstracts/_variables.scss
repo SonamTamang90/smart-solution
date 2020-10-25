@@ -1,6 +1,7 @@
 // COLOR VARIABLES   
 $color-primary: #01baef;
 $color-primary-dark: #05a7d4;
+$color-primary-light: #69c9d0;
 
 $color-black: #000;   
 $color-white: #fff;
@@ -14,7 +15,15 @@ $color-grey-light-3: #3a3939;
 $color-grey-light-1: #faf9f9;
 $color-grey-light-2: #f4f2f2;
 $color-grey-light-3: #f0eeee;
-$color-grey-light-4: #ccc;   
+$color-grey-light-4: #ccc;  
+
+
+$color-grey-dark-2: #999;
+
+// SOCIAL MEDIA COLORS
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$google: #ea4335;
 
 
 // FONT VARIABLES
@@ -26,6 +35,13 @@ $font-display: 'Josefin Sans', sans-serif;
 $mb-sm: 1.5rem;
 $mb-md: 2.5rem;
 $mb-l: 3rem;
+
+// MARGIN AND PADDING VARIABLES
+$pd-sm: 3rem; 
+$pd-md: 4rem;
+$pd-lg: 6rem;
+
+
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em;   // 1200px

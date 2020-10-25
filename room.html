@@ -16,27 +16,22 @@
             <a href="#" class="header__logo">Smart Home</a>
         </div>
 
-        <nav class="user-nav">
-            <ul class="user-nav__list">
-                <li class="user-nav__item">
-                    <svg class="user-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-bell"></use>
-                    </svg>
-                </li>
-                <li class="user-nav__item">
-                    <a href="#" class="user-nav__link">
-                       <svg class="user-nav__icon">
-                           <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                       </svg>
-                    </a>
-                </li>
-                <li class="user-nav__item">
-                    <a href="#" class="user-nav__link">
-                        <img src="img/user.jpg" alt="Sonam Tamang" class="user-nav__user-photo">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="user-nav">
+            <button class="user-nav__button" id="dropdown-panel">
+                <img src="img/user.jpg" alt="User Photo" class="user-nav__photo">
+                <i class='bx bx-chevron-down user-nav__icon'></i>
+            </button>
+            <div class="dropdown-panel">
+                <div class="dropdown-panel__user">
+                    <img src="img/user.jpg" alt="user" class="dropdown-panel__photo">
+                    <p class="dropdown-panel__name">Sonam Tamang</p>
+                </div>
+                <div class="dropdown-panel__cta">
+                    <button class="dropdown-panel--setting">Setting</button>
+                    <button class="dropdown-panel--signout">Sign out</button>
+                </div>
+            </div>
+        </div>
            
     </header>
 
@@ -158,5 +153,6 @@
        
     </section>
 </div>
+<script type="application/javascript" src="js/app.js"></script>
 </body>
 </html>

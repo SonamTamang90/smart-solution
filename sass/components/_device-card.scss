@@ -1,5 +1,5 @@
 .devices {
-    padding: 6rem 0;   
+    @include padding($top: $pd-lg, $bottom: $pd-lg);  
     grid-column: center-start / center-end;
     &__content {
         display: grid;
@@ -11,16 +11,16 @@
 .device { 
     background-color: $color-white; 
     border: 1px solid #b3b1b1;
-    border-radius: 1.5rem; 
+    border-radius: .5rem; 
 
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);    
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(2, 1fr);     
+    grid-template-rows: repeat(3, min-content); 
 
     &__icon {
         display: inline-block;
-        font-size: 7rem;
+        font-size: 6rem;
         color: $color-primary;
         grid-column: 1 / -1; 
         grid-row: 1 / 1;
@@ -73,7 +73,6 @@
         margin-right: .3rem;
         color: #f32626;
     }
-
 
     &__cta {
 
