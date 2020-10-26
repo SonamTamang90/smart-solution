@@ -53,36 +53,22 @@
 }
 
 
-
-
 @media only screen and (max-width:$bp-small) {
-    .heading-1 {
-        font-size: 1.8rem;
+    .heading-primary {
+
+        &--main {
+            display: block;
+            font-size: 1.8rem; 
+            letter-spacing: .2rem;
+        }
+    
+        &--sub {
+           display: none;
+        }
+    }
+
+    .heading-2 {
+        font-size: 2rem;
         letter-spacing: .2rem;
-        line-height: 1.7;
-        
-    }
-
-    .heading-3 {
-        font-size: 1.5rem; 
-        word-spacing: .2rem;
-        line-height: 1.7;
-        letter-spacing: .3rem;
-    }
-}
-
-@media only screen and (max-width:$bp-largest) {
-    .heading-1 { 
-        font-size: 1rem;
-        letter-spacing: .2rem; 
-        line-height: 1.7;
-        
-    }
-
-    .heading-3 {
-        font-size: 1.5rem; 
-        word-spacing: .2rem;
-        line-height: 1.7;
-        letter-spacing: .3rem;
-    }
+    } 
 }

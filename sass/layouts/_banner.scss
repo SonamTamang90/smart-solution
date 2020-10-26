@@ -79,12 +79,28 @@
 }
 
 @media only screen and (max-width:$bp-small) {
-    &__text-box {
-        position: absolute; 
-        top: 50%;
-        left: 38%; 
-        transform: translate(-50%, -50%);
-    }  
+    .banner {      
+        &__text-box {
+            position: absolute; 
+            top: 55%;
+            left: 40%; 
+            transform: translate(-50%, -50%);
+        }
+    
+        &__info {
+            font-size: 1.9rem;  
+            letter-spacing: .5rem; 
+                  
+            &-rooms {  
+                margin-right: 1.5rem;   
+            }  
+    
+            &-devices {
+    
+            }
+    
+        }
+    }
 }
 
 

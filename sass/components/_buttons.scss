@@ -89,13 +89,27 @@
 
         &:link,
         &:visited {
-            font-size: 1.2rem;
-            padding: .5rem 3rem;
+            font-size: .8rem;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            padding: .5rem 3rem; 
           
         }
         
-        &:hover {
-            background-color: $color-primary-dark;
+
+        .btn--add {
+            background-color: $color-primary; 
+            height: 1rem;  
+            width: 2rem;
+            border-radius: 50%;
+            justify-self: end;
+            align-self: center;
+            text-align: center;
+    
+            &__icon {
+                font-size: .1rem;
+                color: $color-white;
+            }
         }
     }
 }
