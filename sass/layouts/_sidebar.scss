@@ -1,5 +1,6 @@
 .sidebar {
     background-color: $color-secondary;
+    border-right: 1px solid var(--border-line);
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
 

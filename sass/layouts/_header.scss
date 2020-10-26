@@ -1,5 +1,5 @@
 .header { 
-    background-color: $color-white;
+    background-color: var(--color-secondary);
     border-bottom: 1px solid $color-grey-light-2;  
     position: relative;
 
@@ -22,7 +22,7 @@
             text-decoration: none;
             font-size: 2.4rem;
             text-transform: uppercase;
-            color: $color-secondary;  
+            color: var(--font-color);  
         }
     }
 }
@@ -65,10 +65,12 @@
         height: 3.5rem;
         border-radius: 50%;
         margin-right: .4rem;
+        border: 2px solid var(--border-radius);
     }
 
     &__icon {
         font-size: 1.8rem;
+        color: var(--font-color);
     }
 }
 

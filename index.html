@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Home &mdash; Manage Home Smartly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -16,12 +17,13 @@
             <a href="#" class="header__logo">Smart Home</a>
         </div>
         <div class="theme">
-            <button class="theme__button" id="theme-change">
-                <div class="theme__icon-box">
-                    <i class="ion-ios-sunny-outline theme__icon"></i>
+            <label id="switch" class="theme__switch">
+                <i class="ion-ios-sunny"></i>
+                <div>
+                    <input type="checkbox" onchange="toggleTheme()" id="slider"/>
+                    <span class="slider round"></span>
                 </div>
-                <span class="theme__name">Light Theme</span>
-            </button>
+            </label>
         </div>
         <div class="user-nav">
             <button class="user-nav__button" id="dropdown-panel">

@@ -1,32 +1,48 @@
-.theme {
-    align-self: stretch;
-
-    & > * {
-        height: 100%;
-    }
-
-    &__button {
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-
-        &:focus {
-            outline: none;
-        }
-    }
-
-    &__icon {
-        display: inline-block;
-        font-size: 2.3rem;
-        margin-right: .5rem;
-    }
-
-    &__name {
-        font-family: inherit;
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
-}
+.theme__switch {
+    // width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .theme__switch div {
+    position: relative;
+    display: block;
+    background: #eee;
+    width: 36px;
+    height: 18px;
+    border-radius: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .ion-ios-sunny {
+    transform: rotate(180deg);
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-right: .5rem;
+    color: var(--color-white);
+  }
+  
+  .theme__switch input {
+    display: none;
+  }
+  
+  .slider {
+    background-color: #999;
+    transition: 0.4s;
+    border-radius: 34px;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    position: relative;
+    margin-top: .3rem;
+  }
+  
+  input:checked + .slider {
+    transform: translateX(13px);
+  }
+  
+ 
+  

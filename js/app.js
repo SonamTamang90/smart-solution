@@ -1,3 +1,5 @@
+
+
 // USER NAV DROPDOWN PANEL
 function showUserPanel() {
     document.querySelector(".dropdown-panel").classList.toggle("dropdown-show");
@@ -22,12 +24,8 @@ window.onclick = function(event) {
   }
 }
 
-document.getElementById('theme-change').addEventListener('click', function() {
-  document.querySelector('.theme__icon').toggle("ion-ios-moon");
-  document.querySelector('.theme__name').innerHTML = "<span class='theme__name'>Dark Theme</span>";
-});
 
-
+// THEME TOGGLING
 // function to set a given theme/color-scheme
 function setTheme(themeName) {
   localStorage.setItem('theme', themeName);

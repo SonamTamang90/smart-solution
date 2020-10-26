@@ -15,7 +15,15 @@
         <div class="header__logo-box">
             <a href="#" class="header__logo">Smart Home</a>
         </div>
-
+        <div class="theme">
+            <label id="switch" class="theme__switch">
+                <i class="ion-ios-sunny"></i>
+                <div>
+                    <input type="checkbox" onchange="toggleTheme()" id="slider"/>
+                    <span class="slider round"></span>
+                </div>
+            </label>
+        </div>
         <div class="user-nav">
             <button class="user-nav__button" id="dropdown-panel">
                 <img src="img/user.jpg" alt="User Photo" class="user-nav__photo">
