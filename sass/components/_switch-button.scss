@@ -1,11 +1,11 @@
-.theme__switch {
+.device__switch {
     // width: 55px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .theme__switch div {
+  .device__switch div {
     position: relative;
     display: block;
     background: #eee;
@@ -18,20 +18,18 @@
   }
   
   .ion-ios-sunny {
-    display: inline-block;
     transform: rotate(180deg);
     display: inline-block;
     font-size: 2.5rem;
-    margin-right: .8rem;
+    margin-right: .5rem;
     color: var(--color-white);
-    margin-top: -.3rem;
   }
   
-  .theme__switch input {
+  .device__switch input {
     display: none;
   }
   
-  .slider {
+  .slider1 {
     background-color: #999;
     transition: 0.4s;
     border-radius: 34px;
@@ -42,7 +40,7 @@
     margin-top: .3rem;
   }
   
-  input:checked + .slider {
+  input:checked + .slider1 {
     transform: translateX(13px);
   }
   

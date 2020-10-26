@@ -82,13 +82,13 @@
     .banner {      
         &__text-box {
             position: absolute; 
-            top: 55%;
+            top: 50%;
             left: 40%; 
             transform: translate(-50%, -50%);
         }
     
         &__info {
-            font-size: 1.9rem;  
+            font-size: 1.5rem;  
             letter-spacing: .5rem; 
                   
             &-rooms {  

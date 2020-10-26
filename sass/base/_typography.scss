@@ -36,7 +36,7 @@
 
 .heading-2 {
     display: inline-block; 
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: var(--font-color); 
     text-transform: uppercase;
     justify-self: start; 
@@ -58,12 +58,14 @@
 
         &--main {
             display: block;
-            font-size: 1.8rem; 
+            font-size: 1.6rem; 
             letter-spacing: .2rem;
+            margin-bottom: .5rem;
         }
     
         &--sub {
-           display: none;
+            display: block;
+            font-size: 1.8rem;
         }
     }
 

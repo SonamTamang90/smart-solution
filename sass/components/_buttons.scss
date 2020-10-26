@@ -38,8 +38,6 @@
             transition: all .3s;
         }
         
-
-
         &:hover {
             background-color: $color-primary-dark;
         }
@@ -47,12 +45,13 @@
 
     &__scenario { 
         grid-column: 1 / -1;
+        display: inline-block;
         font-size: 1.6rem;   
         font-weight: 600;   
         color: $color-white; 
         text-transform: uppercase;
         background-color: $color-primary;
-        padding: 1.5rem 3rem;
+        padding: .7rem 3rem;
         transition: all .3s;
 
 
@@ -83,13 +82,13 @@
 
 
 
-@media only screen and (max-width:$bp-small) {
+@media only screen and (min-width:$bp-small) {
     .btn__room { 
         grid-column: 1 / -1;
 
         &:link,
         &:visited {
-            font-size: .8rem;
+            font-size: 1.5rem; 
             font-weight: 300;
             letter-spacing: .1rem;
             padding: .5rem 3rem; 
