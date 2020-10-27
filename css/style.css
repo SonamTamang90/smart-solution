@@ -233,7 +233,8 @@ body {
   padding-bottom: 6rem;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(3, minmax(12rem, 1fr)); }
+  grid-template-columns: repeat(3, minmax(12rem, 1fr));
+  position: relative; }
 
 .device {
   background-color: #fff;
@@ -244,7 +245,20 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 3rem;
-  transition: all .4s; }
+  transition: all .4s;
+  position: relative; }
+  .device__connected {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #777;
+    margin-right: .3rem; }
+  .device__connect {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    display: flex;
+    align-items: center; }
   .device__icon-box {
     height: 6rem;
     width: 6rem;
@@ -282,6 +296,52 @@ body {
   .device:hover .device__name,
   .device:hover .device__connect-status {
     color: #fff; }
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer; }
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none; }
+
+.modal {
+  color: #000;
+  background-color: #fff;
+  padding: 6rem;
+  width: 70%;
+  border-radius: .5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; }
+
+.hidden {
+  display: none; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5; }
 
 .form {
   display: flex;
@@ -365,43 +425,55 @@ body {
       color: #ea4335; }
 
 .device__switch {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.device__switch div {
   position: relative;
-  display: block;
-  background: #eee;
-  width: 36px;
-  height: 18px;
-  border-radius: 50px;
-  padding: 0 5px;
-  box-sizing: border-box;
-  cursor: pointer; }
-
-.ion-ios-sunny {
-  transform: rotate(180deg);
   display: inline-block;
-  font-size: 2.5rem;
-  margin-right: .5rem;
-  color: var(--color-white); }
+  width: 50px;
+  height: 25px; }
 
 .device__switch input {
-  display: none; }
+  opacity: 0;
+  width: 0;
+  height: 0; }
 
-.slider1 {
-  background-color: #999;
-  transition: 0.4s;
-  border-radius: 34px;
-  height: 12px;
-  width: 12px;
-  display: inline-block;
-  position: relative;
-  margin-top: .3rem; }
+.device__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
 
-input:checked + .slider1 {
-  transform: translateX(13px); }
+.device__slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s; }
+
+input:checked + .device__slider {
+  background-color: #2196F3; }
+
+input:focus + .device__slider {
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .device__slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.device__slider.device__round {
+  border-radius: 34px; }
+
+.device__slider.device__round:before {
+  border-radius: 50%; }
 
 .temperature-box {
   margin-top: 2.8rem;
@@ -833,7 +905,7 @@ input:checked + .slider {
   max-width: 120rem;
   margin: 8rem auto;
   display: grid;
-  grid-template-rows: 7rem 68vh repeat(2, min-content);
+  grid-template-rows: 7rem 40vh repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
 
 .login {

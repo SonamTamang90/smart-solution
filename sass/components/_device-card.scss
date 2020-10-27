@@ -4,6 +4,7 @@
    
     display: grid;
     grid-template-columns: repeat(3, minmax(12rem, 1fr)); 
+    position: relative;
     
 }
 
@@ -17,6 +18,23 @@
     align-items: center;
     padding: 3rem;
     transition: all .4s;
+    position: relative;
+
+    &__connected {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #777;     
+        margin-right: .3rem;
+    }
+
+    &__connect {
+        position: absolute;
+        top: 10%; 
+        right: 8%; 
+        display: flex;   
+        align-items: center;
+    }
 
     &__icon-box {
         height: 6rem;

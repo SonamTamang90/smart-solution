@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Home &mdash; Manage Home Smartly</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
@@ -84,7 +85,7 @@
             </div>
             <div class="page-banner__info">
                 <span class="page-banner__info-rooms"><i class="ion-record page-banner__icon"></i></span>  
-                <span class="page-banner__info-devices">5 Devices</span>
+                <span class="page-banner__info-devices"></span>
             </div>
         </div>
     </section>
@@ -94,68 +95,113 @@
             <div class="device__icon-box">
                 <i class="ion-ios-monitor-outline device__icon"></i>
             </div>
+            <div class="device__connect">
+                <span class="device__connected-1">OFF</span>
+                <label class="device__switch">
+                    <input type="checkbox" id="device__status-1">
+                    <span class="device__slider device__round"></span>
+                </label>
+            </div>
             <h4 class="device__name">Samsung TV</h4>
             <div class="device__status">
                 <p class="device__room">Living Room</p>
-                <div class="device__connect">
-                    <i class="ion-record"></i>
-                    <span class="device__connect-status">On</span>
-                </div>
+            </div>
+            <button class="show-modal">Setting</button>
+        </div>
+        <div class="device">
+            <div class="device__icon-box">
+                <i class="ion-ios-lightbulb-outline device__icon"></i>
+            </div>
+            <div class="device__connect">
+                <span class="device__connected-2">OFF</span> 
+                <label class="device__switch">
+                    <input type="checkbox" id="device__status-2">
+                    <span class="device__slider device__round"></span>
+                </label>
+            </div>
+            <h4 class="device__name">Genaral Lights</h4>
+            <div class="device__status">
+                <p class="device__room">Living Room</p>
+            </div>
+        </div>
+        <div class="device">
+            <div class="device__icon-box">
+                <i class="ion-ios-printer-outline device__icon"></i>
+            </div>
+            <div class="device__connect">
+                <span class="device__connected">ON</span> 
+                <label class="device__switch">
+                    <input type="checkbox" id="device__status">
+                    <span class="device__slider device__round"></span>
+                </label>
+            </div>
+            <h4 class="device__name">HP Printer</h4>
+            <div class="device__status">
+                <p class="device__room">Living Room</p>
+            </div>
+        </div>
+        <div class="device">
+            <div class="device__icon-box">
+                <i class="ion-ios-printer-outline device__icon"></i>
+            </div>
+            <div class="device__connect">
+                <span class="device__connected">ON</span> 
+                <label class="device__switch">
+                    <input type="checkbox" id="device__status">
+                    <span class="device__slider device__round"></span>
+                </label>
+            </div>
+            <h4 class="device__name">HP Printer</h4>
+            <div class="device__info">
+                <p class="device__room">Living Room</p>
+            </div>
+        </div>
+        <div class="device">
+            <div class="device__icon-box">
+                <i class="ion-ios-printer-outline device__icon"></i>
+            </div>
+            <div class="device__connect">
+                <span class="device__connected">ON</span> 
+                <label class="device__switch">
+                    <input type="checkbox" id="device__status">
+                    <span class="device__slider device__round"></span>
+                </label>
+            </div>
+            <h4 class="device__name">HP Printer</h4>
+            <div class="device__info">
+                <p class="device__room">Living Room</p>
             </div>
         </div>
         <div class="device">
             <div class="device__icon-box">
                 <i class="ion-ios-lightbulb-outline device__icon"></i>
             </div>
-            <h4 class="device__name">Genaral Lights</h4>
-            <div class="device__status">
-                <p class="device__room">Living Room</p>
-                <div class="device__connect">
-                    <i class="ion-record"></i>
-                    <span class="device__connect-status">On</span>
-                </div>
-            </div>
-        </div>
-        <div class="device">
-            <div class="device__icon-box">
-                <i class="ion-ios-printer-outline device__icon"></i>
-            </div>
-            <h4 class="device__name">HP Printer</h4>
-            <div class="device__status">
-                <p class="device__room">Living Room</p>
-                <div class="device__connect">
-                    <i class="ion-record device__off"></i>
-                    <span class="device__connect-status">On</span>
-                </div>
-            </div>
-        </div>
-        <div class="device">
-            <div class="device__icon-box">
-                <i class="ion-ios-printer-outline device__icon"></i>
-            </div>
-            <h4 class="device__name">HP Printer</h4>
-            <div class="device__info">
-                <p class="device__room">Living Room</p>
-            </div>
-        </div>
-        <div class="device">
-            <div class="device__icon-box">
-                <i class="ion-ios-printer-outline device__icon"></i>
-            </div>
-            <h4 class="device__name">HP Printer</h4>
-            <div class="device__info">
-                <p class="device__room">Living Room</p>
-            </div>
-        </div>
-        <div class="device">
-            <div class="device__icon-box">
-                <i class="ion-ios-lightbulb-outline device__icon"></i>
+            <div class="device__connect">
+                <span class="device__connected">ON</span>
+                <label class="device__switch">
+                    <input type="checkbox" id="device__status">
+                    <span class="device__slider device__round"></span>
+                </label>
             </div>
             <h4 class="device__name">Genaral Lights</h4>
             <div class="device__info">
                 <p class="device__room">Living Room</p>
             </div>
         </div>
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>I'm a modal window 😍</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="overlay hidden"></div>
     </section>
 
     <section class="scenarios">

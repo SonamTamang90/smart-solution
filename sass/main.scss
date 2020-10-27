@@ -15,7 +15,7 @@
     --themeIconBorderColor: var(--sage);
     --navBg: var(--sage);
     --navLinkHoverBg: var(--paleSpringBud);
-    --mainBg: var(--goldCrayola);
+    --mainBg: var(--goldCrayola);     
     --fontColor: var(--black);
   }
   
@@ -39,10 +39,11 @@
 
 @import "components/buttons";
 @import "components/device-card"; 
+@import "components/device-modal";
 @import "components/form";
 @import "components/switch-button";
 @import "components/temperature-box"; 
-@import "components/theme";
+@import "components/theme"; 
 
 @import "layouts/banner";
 @import "layouts/header";

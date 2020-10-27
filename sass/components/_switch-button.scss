@@ -1,48 +1,59 @@
 .device__switch {
-    // width: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .device__switch div {
-    position: relative;
-    display: block;
-    background: #eee;
-    width: 36px;
-    height: 18px;
-    border-radius: 50px;
-    padding: 0 5px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-  
-  .ion-ios-sunny {
-    transform: rotate(180deg);
-    display: inline-block;
-    font-size: 2.5rem;
-    margin-right: .5rem;
-    color: var(--color-white);
-  }
-  
-  .device__switch input {
-    display: none;
-  }
-  
-  .slider1 {
-    background-color: #999;
-    transition: 0.4s;
-    border-radius: 34px;
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    position: relative;
-    margin-top: .3rem;
-  }
-  
-  input:checked + .slider1 {
-    transform: translateX(13px);
-  }
-  
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.device__switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
  
-  
+.device__slider {     
+  position: absolute;
+  cursor: pointer; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.device__slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;  
+  width: 18px; 
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+} 
+
+input:checked + .device__slider {
+  background-color: #2196F3;
+}
+
+input:focus + .device__slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .device__slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.device__slider.device__round {
+  border-radius: 34px;
+}
+
+.device__slider.device__round:before {   
+  border-radius: 50%;
+}
