@@ -88,52 +88,59 @@
         </div>
     </section>
 
+    <!-- YOUR ROOMS SECTION START -->
     <section class="rooms">
-        <div class="rooms__top">
-            <h2 class="heading-2">Your Rooms</h2>
-            <button class="btn btn--add"><i class="ion-ios-plus-empty btn--add__icon"></i></button>
-        </div>
+        <h2 class="heading-2">Your Rooms</h2>
         <div class="rooms__content">
-            <div class="room">
+            <div class="room" id="bed-room">
                 <img src="img/bedroom.jpg" alt="" class="room__photo">
-                <a href="room.html" class="btn btn__room">Bed Room</a>
+                <h4 class="room__title">Bed Room</h4>
             </div>
-            <div class="room">
+            <div class="room" id="living-room">
                 <img src="img/livingroom.jpg" alt="" class="room__photo">
-                <a href="room.html" class="btn btn__room">Living Room</a>
+                <h4 class="room__title">Living Room</h4>
+            </div>
+            <div class="room" id="kitchen">
+                <img src="img/bedroom (3).jpg" alt="" class="room__photo">
+                <h4 class="room__title">Kitchen</h4>
             </div>
             <div class="room">
-                <img src="img/bedroom (3).jpg" alt="" class="room__photo">
-                <a href="room.html" class="btn btn__room">Kitchen</a>
+                <div class="room__add">
+                    <button class="room--add"><i class="ion-ios-plus-empty room--add-icon"></i></button>
+                    <span class="room__add-text">Add Room</span>
+                </div>
             </div>
         </div>
     </section>
+    <!-- YOUR ROOMS SECTION END -->
 
+    <!-- YOUR SCENARIOS SECTION START -->
     <section class="scenarios">
-        <div class="scenarios__top">
-            <h2 class="heading-2">Your Favorite Scenarios</h2>
-            <button class="btn btn--add"><i class="ion-ios-plus-empty btn--add__icon"></i></button>
-        </div>
+        <h2 class="heading-2">Your Favorite Scenerios</h2>
         <div class="scenarios__content">
             <div class="scenario">
                 <img src="img/bedroom.jpg" alt="" class="scenario__photo">
-                <button class="btn btn__scenario">Get Up</button>
+                <h4 class="scenario__title">Get Up</h4>
             </div>
             <div class="scenario">
                 <img src="img/livingroom.jpg" alt="" class="scenario__photo">
-                <button class="btn btn__scenario">Sleep</button>
+                <h4 class="scenario__title">Sleep</h4>
             </div>
             <div class="scenario">
                 <img src="img/bedroom (3).jpg" alt="" class="scenario__photo">
-                <button class="btn btn__scenario">Go Home</button>
+                <h4 class="scenario__title">Go Home</h4>
             </div>
             <div class="scenario">
-                <img src="img/bedroom (3).jpg" alt="" class="scenario__photo">
-                <button class="btn btn__scenario">Go Home</button>
+                <div class="scenario__add">
+                    <button class="scenario--add"><i class="ion-ios-plus-empty scenario--add-icon"></i></button>
+                    <span class="scenario__add-text">Add Scenerios</span>
+                </div>
             </div>
         </div>
     </section>
+    <!-- YOUR SCENARIOS SECTION START -->
 </div>
+<script src="js/routing.js"></script>
 <script type="application/javascript" src="js/app.js"></script>
 </body>
 </html>

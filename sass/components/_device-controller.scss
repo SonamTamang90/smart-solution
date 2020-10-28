@@ -1,0 +1,229 @@
+.device-name {
+    font-family: $font-display;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include margin($bottom: $mb-sm);
+}
+
+.device-control {
+    border: 1px solid #eee;
+    border-radius: .5rem;
+
+    // NAVIGATION 
+    &__nav {
+        height: 4rem;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__item {
+
+
+        i {
+            display: inline-block;
+            font-size: 3rem;
+        }
+    }
+
+    // CONTROLLER PANEL
+    &__main {
+        padding: 3rem 0;
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include margin($top: $mb-sm);
+
+        &-mode {
+            font-size: 1.4rem;
+            @include margin($bottom: $mb-sm);
+        }
+
+        &-panel {
+            height: 13rem;
+            width: 13rem;
+            background-image: linear-gradient(to right bottom, #3a7bd5, #127bd6);
+            border-radius: 50%;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                height: 11rem;
+                width: 11rem;
+                background-color: $color-white;
+                z-index: 100;
+                border-radius: 50%;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-info {
+            position: absolute;
+            top: 50%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+            z-index: 200;
+            text-align: center;
+        }
+
+        &-value {
+            font-size: 1.8rem;
+        }
+
+        &-text {
+            font-size: .8rem;
+        }
+    }
+
+    // DEVICE CONTROLLER PLUS AND MINUS
+    &__controller {
+        @include margin($top: $mb-md);
+        display: flex;
+        align-items: center;
+    }
+
+    &__plus,
+    &__minus {
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: $color-primary;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 1.5rem;
+            color: $color-white;
+        }
+
+        @include margin($right: $mb-sm, $left: $mb-sm);
+    }
+
+    // DEVICE CALL TO ACTION
+    &__cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include padding($top: $pd-sm, $bottom: $pd-sm); 
+
+        &--power,
+        &--sleep,
+        &--timing,
+        &--setup {
+            cursor: pointer;
+            height: 3rem;
+            width: 3rem;
+            background: none;
+            border: none;
+            border: 1px solid #eee;
+            box-shadow: 0 .3rem .6rem rgba($color-black, .2);
+            border-radius: 50%;
+            padding: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            @include margin($right: $mb-sm, $left: $mb-sm);
+
+            &:hover {
+                background-color: #eee;
+                transform: translateY(-1.3px);
+            }
+
+            &:active {
+                transform: translateY(1px);
+                border-radius: 0 .1rem .3rem rgba($color-black, .2);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-icon { 
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: $color-secondary;
+        }
+    }
+}
+
+
+// CONTROL TOGGLE SWITCH
+.control__switch {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 5px;
+}
+  
+.control__switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+   
+.control__slider {     
+    position: absolute;
+    cursor: pointer; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.control__slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;  
+    width: 15px; 
+    left: 4px;
+    top: -.7rem;
+    bottom: -1px;
+    background-color: $color-primary;
+    -webkit-transition: .4s;
+    transition: .4s;
+} 
+  
+input:checked + .control__slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .control__slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .control__slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(10px);
+}
+  
+/* Rounded sliders */
+.control__slider.control__round {
+    border-radius: 34px;
+}
+
+.control__slider.control__round:before {   
+    border-radius: .3rem;
+}
