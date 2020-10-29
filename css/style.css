@@ -81,7 +81,8 @@ body {
   --font-color: #000000;
   --border-radius: #777;
   --color-white: #000;
-  --color-background: #fff; }
+  --color-background: #fff;
+  --box-shadow: #000; }
 
 .theme-dark {
   --color-primary: #17ed90;
@@ -91,7 +92,8 @@ body {
   --color-white: #fff;
   --border-radius: #EDEDED;
   --border-line: #EDEDED;
-  --color-background: #101d2c; }
+  --color-background: #101d2c;
+  --box-shadow: #fff; }
 
 .heading-primary--sub, .heading-1, .heading-2 {
   font-family: "Josefin Sans", sans-serif;
@@ -441,6 +443,84 @@ body {
     .device-control__plus i, .device-control__minus i {
       font-size: 1.5rem;
       color: #fff; }
+  .device-control__range input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 25rem;
+    background-color: #eee; }
+  .device-control__range input[type=range]:focus {
+    outline: none; }
+  .device-control__range input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #ccc;
+    border-radius: 25px;
+    border: 0px solid #000101; }
+  .device-control__range input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 15px;
+    border-radius: 3px;
+    background: #000;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px; }
+  .device-control__range input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ecec48; }
+  .device-control__range input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 12.8px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #ac51b5;
+    border-radius: 25px;
+    border: 0px solid #000101; }
+  .device-control__range input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 39px;
+    border-radius: 7px;
+    background: #65001c;
+    cursor: pointer; }
+  .device-control__range input[type=range]::-ms-track {
+    width: 100%;
+    height: 12.8px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    border-width: 39px 0;
+    color: transparent; }
+  .device-control__range input[type=range]::-ms-fill-lower {
+    background: #ac51b5;
+    border: 0px solid #000101;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+  .device-control__range input[type=range]::-ms-fill-upper {
+    background: #ac51b5;
+    border: 0px solid #000101;
+    border-radius: 50px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d; }
+  .device-control__range input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 39px;
+    border-radius: 7px;
+    background: #65001c;
+    cursor: pointer; }
+  .device-control__range input[type=range]:focus::-ms-fill-lower {
+    background: #ac51b5; }
+  .device-control__range input[type=range]:focus::-ms-fill-upper {
+    background: #ac51b5; }
+  .device-control__range-input {
+    width: 24rem;
+    padding: 4rem 0rem; }
   .device-control__cta {
     display: flex;
     align-items: center;
@@ -537,7 +617,8 @@ input:checked + .control__slider:before {
   background-color: #fff;
   color: #444;
   border-radius: 10rem;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 5s; }
 
 .close-modal {
   position: absolute;
@@ -601,6 +682,43 @@ p {
   height: 100%;
   backdrop-filter: blur(3px);
   z-index: 5; }
+
+.newmodal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
+
+.modal-content {
+  align-self: center;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem; }
+
+.btn-close {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray; }
+
+.newshow-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
 
 .form {
   display: flex;

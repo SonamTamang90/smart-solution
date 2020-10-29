@@ -95,40 +95,46 @@
     </section>
 
 
-    <!-- YOUR ROOMS SECTION START -->
+    <!-- ROOMS DEVICES SECTION START -->
     <section class="rooms-devices">
         <h2 class="heading-2">Your Equipments</h2>
         <div class="rooms-devices__content">
+            
             <div class="room-device" id="show-modal">
                 <div class="room-device__icon">
                     <i class="ion-ios-monitor-outline"></i>
                 </div>
                 <h4 class="room-device__title">Samsung TV</h4>
             </div>
-            <div class="room-device">
+
+            <div class="room-device" id="show-modal">
                 <div class="room-device__icon">
                     <i class="ion-ios-game-controller-b-outline"></i>
                 </div>
                 <h4 class="room-device__title">Sony PS4</h4>
             </div>
-            <div class="room-device">
+
+            <div class="room-device" id="show-modal">
                 <div class="room-device__icon">
                     <i class="ion-ios-lightbulb-outline"></i>
                 </div>
                 <h4 class="room-device__title">General Lights</h4>
             </div>
+
             <div class="room-device">
                 <div class="room-device__icon">
                     <i class="ion-ios-flame-outline"></i>
                 </div>
                 <h4 class="room-device__title">Room Heater</h4>
             </div>
+
             <div class="room-device">
                 <div class="room-device__icon">
                     <i class="ion-ios-videocam-outline"></i>
                 </div>
                 <h4 class="room-device__title">HD Camera +</h4>
             </div>
+
             <div class="room-device">
                 <div class="room-device__add">
                     <button class="room-device--add"><i class="ion-ios-plus-empty room-device--add-icon"></i></button>
@@ -195,8 +201,126 @@
             </div>
         </div>
         <div class="overlay hidden"></div>
+
+         <!-- MODAL FOR DISPLAYING DEVICE CONTROLLER-->
+         <div class="modal hidden">
+            <button class="close-modal">
+                <svg class="close-modal__icon">
+                    <use xlink:href="img/sprite.svg#icon-x"></use>
+                </svg>
+            </button>
+            <h2 class="device-name">General Lights</h2>
+            <div class="device-control">
+                <nav class="device-control__nav">
+                    <ul class="device-control__list">
+                        <li class="device-control__item"><i class="ion-ios-lightbulb-outline"></i></li>
+                        <li class="device-control__item"><i class="ion-ios-lightbulb"></i></li>
+                        <li class="device-control__item"><i class="ion-ios-refresh-empty"></i></li>
+                    </ul>
+                </nav>
+                <div class="device-control__main">
+                    <div class="device-control__main-mode">Brightness mode</div>
+                    <div class="device-control__main-panel">
+                        <div class="device-control__main-info">
+                            <p class="device-control__main-text">Current Brightness: 52%</p>
+                        </div>
+                    </div>
+                    <div class="device-control__controller">
+                        <span class="device-control__plus"><i class="ion-ios-minus-empty"></i></span> 
+                        <div class="device-control__range">
+                            <input type="range" class="device-control__range-input" min="0" max="100">
+                        </div>
+                        <span class="device-control__minus"><i class="ion-ios-plus-empty"></i></span> 
+                    </div>
+                </div>
+                <div class="device-control__cta">
+                    <button class="device-control__cta--power">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-power"></use>
+                        </svg>
+                    </button>
+                    <button class="device-control__cta--sleep">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-moon"></use>
+                        </svg>
+                    </button>
+                    <button class="device-control__cta--timing">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-clock"></use>
+                        </svg>
+                    </button>
+                    <button class="device-control__cta--setup">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-settings"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay hidden"></div>
+
+          <!-- MODAL FOR DISPLAYING DEVICE CONTROLLER-->
+          <div class="modal hidden">
+            <button class="close-modal">
+                <svg class="close-modal__icon">
+                    <use xlink:href="img/sprite.svg#icon-x"></use>
+                </svg>
+            </button>
+            <h2 class="device-name">This is Third Working</h2>
+            <div class="device-control">
+                <nav class="device-control__nav">
+                    <ul class="device-control__list">
+                        <li class="device-control__item"><i class="ion-ios-snowy"></i></li>
+                        <li class="device-control__item"><i class="ion-ios-sunny-outline"></i></li>
+                        <li class="device-control__item"><i class="ion-ios-refresh-empty"></i></li>
+                    </ul>
+                </nav>
+                <div class="device-control__main">
+                    <div class="device-control__main-mode">Refrigeration mode</div>
+                    <div class="device-control__main-panel">
+                        <div class="device-control__main-info">
+                            <span class="device-control__main-value">26C</span>
+                            <p class="device-control__main-text">Current temp: 34 C</p>
+                        </div>
+                    </div>
+                    <div class="device-control__controller">
+                        <span class="device-control__plus"><i class="ion-ios-minus-empty"></i></span> 
+                        <label class="control__switch">
+                            <input type="checkbox" id="control__input">
+                            <span class="control__slider control__round"></span>
+                        </label> 
+                        <span class="device-control__minus"><i class="ion-ios-plus-empty"></i></span> 
+                    </div>
+                </div>
+                <div class="device-control__cta">
+                    <button class="device-control__cta--power">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-power"></use>
+                        </svg>
+                    </button>
+                    <button class="device-control__cta--sleep">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-moon"></use>
+                        </svg>
+                    </button>
+                    <button class="device-control__cta--timing">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-clock"></use>
+                        </svg>
+                    </button>
+                    <button class="device-control__cta--setup">
+                        <svg class="device-control__cta-icon">
+                            <use xlink:href="img/sprite.svg#icon-settings"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay hidden"></div>
     </section>
-    <!-- YOUR ROOMS SECTION END -->    
+    <!-- YOUR ROOMS SECTION END -->  
+    
+    
 <script type="application/javascript" src="js/app.js"></script>
 </body>
 </html>
