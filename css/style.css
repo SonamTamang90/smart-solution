@@ -473,13 +473,14 @@ body {
   .device-control__range input[type=range]::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     border: 0px solid #000000;
-    height: 20px;
+    height: 25px;
     width: 15px;
     border-radius: 3px;
-    background: #000;
+    background: #fff;
+    border: 1px solid #777;
     cursor: pointer;
     -webkit-appearance: none;
-    margin-top: -8px; }
+    margin-top: -9.5px; }
   .device-control__range-input-1[type=range]:focus::-webkit-slider-runnable-track {
     background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); }
   .device-control__range input[type=range]:focus::-webkit-slider-runnable-track {
@@ -1427,6 +1428,7 @@ input:checked + .slider {
   grid-column: center-start / center-end;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  margin-bottom: 3rem;
   padding-bottom: 8rem; }
   .scenarios__top {
     display: grid;
@@ -1569,11 +1571,6 @@ input:checked + .slider {
   background-color: #fff;
   padding: 6rem;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3); }
-
-@media only screen and (max-width: 37.5em) {
-  .container {
-    max-width: 100%;
-    margin: 0; } }
 
 @media only screen and (max-width: 37.5em) {
   .container {

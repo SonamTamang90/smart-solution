@@ -1,6 +1,7 @@
 .scenarios {
     grid-column: center-start / center-end; 
-    @include padding($top: $pd-sm, $bottom: $pd-sm); 
+    @include padding($top: $pd-sm, $bottom: $pd-sm);
+    @include margin($bottom: $mb-l); 
 
     &__top {
         display: grid;

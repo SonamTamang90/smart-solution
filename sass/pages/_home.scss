@@ -11,6 +11,7 @@
                         
 }  
 
+
 .login { 
    height: 100vh;
    position: relative;
@@ -26,12 +27,6 @@
     box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .3);
 }
 
-@media only screen and (max-width:$bp-small) {
-    .container {
-        max-width: 100%;
-        margin: 0; 
-    }
-}
 
 @media only screen and (max-width:$bp-small) {
     .container {
