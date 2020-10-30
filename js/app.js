@@ -37,8 +37,10 @@ function setTheme(themeName) {
 function toggleTheme() {
  if (localStorage.getItem('theme') === 'theme-dark'){
      setTheme('theme-light');
+     alert('Light Mode Activated')
  } else {
      setTheme('theme-dark');
+     alert('Dark Mode Activated')
  }
 }
 

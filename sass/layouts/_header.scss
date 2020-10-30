@@ -145,6 +145,35 @@
 }
 
 
+
+@media only screen and (max-width: $bp-large) {
+    .header {     
+        grid-column: 1 / -1; 
+        grid-row: 1 / 2;
+    
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    
+        &__logo-box {
+            @include m-lr(3rem, 0);
+            margin-right: auto;
+        }
+    
+        &__logo {
+    
+            &:link,
+            &:visited {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 2.4rem;
+                text-transform: uppercase;
+                color: var(--font-color);  
+            }
+        }
+    }
+}
+
 @media only screen and (max-width:$bp-small) {
     .header {     
     

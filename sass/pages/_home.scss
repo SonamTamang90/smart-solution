@@ -8,8 +8,23 @@
     grid-template-rows: 7rem 60vh repeat(2, min-content);
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) 
                         [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end] ; 
+
+  
                         
 }  
+
+@media only screen and (max-width: $bp-large) {
+    .container {
+        max-width: 100%; 
+        height: 100%;
+        margin: 0; 
+        box-shadow: 0 0rem 0rem rgba(0, 0, 0, .7);
+        grid-template-rows: 7rem 60vh repeat(2, min-content) 8rem;
+        grid-template-columns: [full-start] minmax(3rem, 1fr) 
+                            [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) 
+                            [center-end] minmax(3rem, 1fr) [full-end] ;                             
+    } 
+}
 
 
 .login { 
@@ -28,12 +43,12 @@
 }
 
 
-@media only screen and (max-width:$bp-small) {
-    .container {
-        max-width: 100%;
-        margin: 0; 
-        grid-template-rows: 7rem 60vh repeat(2, min-content);
-        grid-template-columns: [sidebar-start] 0rem [sidebar-end full-start] minmax(3rem, 1fr) 
-        [center-start] repeat(9,[col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end] ; 
-    }
-}
+// @media only screen and (max-width:$bp-small) {
+//     .container {
+//         max-width: 100%;
+//         margin: 0; 
+//         grid-template-rows: 7rem 60vh repeat(2, min-content);
+//         grid-template-columns: [sidebar-start] 0rem [sidebar-end full-start] minmax(3rem, 1fr) 
+//         [center-start] repeat(9,[col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end] ; 
+//     }
+// }

@@ -1,0 +1,22 @@
+.theme-light {
+    --color-primary: #0060df;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #000000;
+    --border-radius: #777;
+    --color-white: #000; 
+    --color-background: #fff;  
+    --box-shadow: 0 .5rem 1rem rgba(#000, .3)
+}
+
+.theme-dark { 
+    --color-primary: #17ed90;
+    --color-secondary: #101d2c;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+    --color-white: #fff; 
+    --border-radius: #EDEDED;
+    --border-line: #EDEDED;
+    --color-background: #101d2c;
+    --box-shadow: 0 .5rem 1rem rgba(#fff, .3)
+}
