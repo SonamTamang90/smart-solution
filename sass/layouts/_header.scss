@@ -2,6 +2,7 @@
     background-color: var(--color-secondary);
     border-bottom: 1px solid $color-grey-light-2;  
     position: relative;
+    z-index: 20;
 
     grid-column: sidebar-start / full-end;
 

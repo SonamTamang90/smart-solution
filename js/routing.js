@@ -1,10 +1,6 @@
-
-
 document.querySelector('.dropdown-panel--signout').addEventListener('click', function() {
     window.location.href = "login.html";
 });
-
-
 
 /////////////////////////////////////////
 // NAVIGATING TO PAGES
