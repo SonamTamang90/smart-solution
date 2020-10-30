@@ -161,7 +161,7 @@
                 </nav>
                 <div class="device-control__main">
                     <div class="device-control__main-mode">Refrigeration mode</div>
-                    <div class="device-control__main-panel">
+                    <div class="device-control__main-panel device-control__main-panel-1">
                         <div class="device-control__main-info">
                             <span class="device-control__main-value">26C</span>
                             <p class="device-control__main-text">Current temp: 34 C</p>
@@ -169,10 +169,9 @@
                     </div>
                     <div class="device-control__controller">
                         <span class="device-control__plus"><i class="ion-ios-minus-empty"></i></span> 
-                        <label class="control__switch">
-                            <input type="checkbox" id="control__input">
-                            <span class="control__slider control__round"></span>
-                        </label> 
+                        <div class="device-control__range">
+                            <input type="range" class="device-control__range-input device-control__range-input-1" min="0" max="100" value="100" id="range"> 
+                        </div>
                         <span class="device-control__minus"><i class="ion-ios-plus-empty"></i></span> 
                     </div>
                 </div>
@@ -220,15 +219,15 @@
                 </nav>
                 <div class="device-control__main">
                     <div class="device-control__main-mode">Brightness mode</div>
-                    <div class="device-control__main-panel">
+                    <div class="device-control__main-panel device-control__main-panel-2" id="device-brightness">
                         <div class="device-control__main-info">
                             <p class="device-control__main-text">Current Brightness: 52%</p>
                         </div>
                     </div>
                     <div class="device-control__controller">
                         <span class="device-control__plus"><i class="ion-ios-minus-empty"></i></span> 
-                        <div class="device-control__range">
-                            <input type="range" class="device-control__range-input" min="0" max="100">
+                        <div class="device-control__range ">
+                            <input type="range" class="device-control__range-input-2" min="0" max="100" value="100" id="range">
                         </div>
                         <span class="device-control__minus"><i class="ion-ios-plus-empty"></i></span> 
                     </div>

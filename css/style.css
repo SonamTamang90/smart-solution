@@ -234,8 +234,7 @@ body {
   grid-column: center-start / center-end;
   padding-top: 8rem;
   padding-bottom: 12rem;
-  border-bottom: 1px solid #eee;
-  position: relative; }
+  border-bottom: 1px solid #eee; }
   .rooms-devices__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
@@ -396,9 +395,8 @@ body {
       font-size: 1.4rem;
       margin-bottom: 1.5rem; }
     .device-control__main-panel {
-      height: 13rem;
-      width: 13rem;
-      background-image: linear-gradient(to right bottom, #3a7bd5, #127bd6);
+      height: 15rem;
+      width: 15rem;
       border-radius: 50%;
       position: relative; }
       .device-control__main-panel::after {
@@ -406,19 +404,23 @@ body {
         display: inline-block;
         height: 11rem;
         width: 11rem;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.9);
         z-index: 100;
         border-radius: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
+      .device-control__main-panel-1 {
+        background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); }
+      .device-control__main-panel-2 {
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); }
     .device-control__main-info {
       position: absolute;
       top: 50%;
       left: 53%;
       transform: translate(-50%, -50%);
-      z-index: 200;
+      z-index: 400;
       text-align: center; }
     .device-control__main-value {
       font-size: 1.8rem; }
@@ -430,29 +432,39 @@ body {
     align-items: center; }
   .device-control__plus, .device-control__minus {
     display: inline-block;
-    height: 2rem;
-    width: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
     border-radius: 50%;
-    background-color: #01baef;
+    background-color: #fff;
+    border: 1px solid #eee;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-items: center;
+    cursor: pointer;
+    transition: all .4s;
+    box-shadow: 0 0.3rem 6rem rgba(0, 0, 0, 0.2);
     margin-right: 1.5rem;
     margin-left: 1.5rem; }
     .device-control__plus i, .device-control__minus i {
-      font-size: 1.5rem;
-      color: #fff; }
+      font-size: 2rem;
+      color: #000;
+      font-weight: 600; }
+    .device-control__plus:hover, .device-control__minus:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }
+    .device-control__plus:active, .device-control__minus:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); }
   .device-control__range input[type=range] {
     -webkit-appearance: none;
-    margin: 10px 0;
-    width: 25rem;
-    background-color: #eee; }
+    width: 25rem; }
   .device-control__range input[type=range]:focus {
     outline: none; }
   .device-control__range input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 5px;
+    height: 6px;
     cursor: pointer;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
     background: #ccc;
@@ -468,8 +480,10 @@ body {
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -8px; }
+  .device-control__range-input-1[type=range]:focus::-webkit-slider-runnable-track {
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); }
   .device-control__range input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ecec48; }
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); }
   .device-control__range input[type=range]::-moz-range-track {
     width: 100%;
     height: 12.8px;
@@ -664,8 +678,8 @@ p {
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 55%;
+  left: 53%;
   transform: translate(-50%, -50%);
   width: 65%;
   background-color: white;
@@ -714,11 +728,104 @@ p {
   border-radius: 0.25rem;
   background-color: lightgray; }
 
-.newshow-modal {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
+@media only screen and (max-width: 37.5em) {
+  .show-modal {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.75rem 4rem;
+    margin: 5rem 2rem;
+    border: none;
+    background-color: #fff;
+    color: #444;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 5s; }
+  .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.3rem 6rem rgba(0, 0, 0, 0.3);
+    transition: all .3s; }
+    .close-modal:focus {
+      outline: none; }
+    .close-modal:hover {
+      background-color: #01baef;
+      border: none; }
+    .close-modal:hover .close-modal__icon {
+      fill: #fff; }
+    .close-modal__icon {
+      width: 1.5rem;
+      height: 1.5rem; }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
+  p {
+    font-size: 1.8rem; }
+  /* -------------------------- */
+  /* CLASSES TO MAKE MODAL WORK */
+  .hidden {
+    display: none; }
+  .modal {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 55%;
+    background-color: white;
+    padding: 4.3rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10; }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 5; }
+  .newmodal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
+  .modal-content {
+    align-self: center;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem; }
+  .btn-close {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray; } }
 
 .form {
   display: flex;
@@ -1441,6 +1548,7 @@ input:checked + .slider {
     color: #faf9f9; }
 
 .container {
+  position: relative;
   box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.7);
   background-color: var(--color-background);
   max-width: 120rem;

@@ -49,18 +49,19 @@
         }
 
         &-panel {
-            height: 13rem;
-            width: 13rem;
-            background-image: linear-gradient(to right bottom, #3a7bd5, #127bd6);
+            height: 15rem;  
+            width: 15rem;
+           
             border-radius: 50%;
             position: relative;
+            
 
             &::after {
                 content: "";
                 display: inline-block;
                 height: 11rem;
                 width: 11rem;
-                background-color: $color-white;
+                background-color: rgba($color-white, .9);
                 z-index: 100;
                 border-radius: 50%;
 
@@ -69,6 +70,14 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+
+            &-1 {
+                background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+            }
         }
 
         &-info {
@@ -76,7 +85,7 @@
             top: 50%;
             left: 53%;
             transform: translate(-50%, -50%);
-            z-index: 200;
+            z-index: 400;
             text-align: center;
         }
 
@@ -99,18 +108,34 @@
     &__plus,
     &__minus {
         display: inline-block;
-        height: 2rem;
-        width: 2rem;
+        height: 3.5rem;
+        width: 3.5rem;
         border-radius: 50%;
-        background-color: $color-primary;
+        background-color: $color-white;
+        border: 1px solid #eee;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
+        justify-items: center; 
+        cursor: pointer;      
+        transition: all .4s; 
+        box-shadow: 0 .3rem 6rem rgba($color-black, .2);
 
         i {
-            font-size: 1.5rem;
-            color: $color-white;
+            font-size: 2rem;
+            color: $color-black;
+            font-weight: 600;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 .1rem .3rem rgba($color-black, .2);  
+        }
+
+        &:active {
+            transform: translateY(-1px);   
+            box-shadow: 0 .5rem .5rem rgba($color-black, .1);
         }
 
         @include margin($right: $mb-sm, $left: $mb-sm);
@@ -120,25 +145,25 @@
 
         input[type=range] {
             -webkit-appearance: none;
-            margin: 10px 0;
             width: 25rem;
-            background-color: #eee;
-          }
+            // background-color: #eee; 
+        }
 
-          input[type=range]:focus { 
+        input[type=range]:focus { 
             outline: none;
-          }
+        }
           
-          input[type=range]::-webkit-slider-runnable-track {
+        input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
-            height: 5px;
+            height: 6px; 
             cursor: pointer;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-            background: #ccc;
+            background: #ccc;  
             border-radius: 25px;
             border: 0px solid #000101;
-          }
-          input[type=range]::-webkit-slider-thumb {
+        }
+
+        input[type=range]::-webkit-slider-thumb {
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
             border: 0px solid #000000;
             height: 20px;
@@ -148,11 +173,16 @@
             cursor: pointer;
             -webkit-appearance: none;
             margin-top: -8px;
-          }
-          input[type=range]:focus::-webkit-slider-runnable-track {
-            background: #ecec48;
-          }
-          input[type=range]::-moz-range-track {
+        }
+
+        &-input-1[type=range]:focus::-webkit-slider-runnable-track { 
+            background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+        }
+
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+        }
+        input[type=range]::-moz-range-track {
             width: 100%;
             height: 12.8px;
             cursor: pointer;
@@ -161,8 +191,9 @@
             background: #ac51b5;
             border-radius: 25px;
             border: 0px solid #000101;
-          }
-          input[type=range]::-moz-range-thumb {
+        }
+
+        input[type=range]::-moz-range-thumb {
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
             border: 0px solid #000000;
             height: 20px;
@@ -170,8 +201,9 @@
             border-radius: 7px;
             background: #65001c;
             cursor: pointer;
-          }
-          input[type=range]::-ms-track {
+        }
+
+        input[type=range]::-ms-track {
             width: 100%;
             height: 12.8px;
             cursor: pointer;
@@ -180,20 +212,23 @@
             border-color: transparent;
             border-width: 39px 0;
             color: transparent;
-          }
-          input[type=range]::-ms-fill-lower {
+        }
+        
+        input[type=range]::-ms-fill-lower {
             background: #ac51b5;
             border: 0px solid #000101;
             border-radius: 50px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-          }
-          input[type=range]::-ms-fill-upper {
+        }
+
+        input[type=range]::-ms-fill-upper {
             background: #ac51b5;
             border: 0px solid #000101;
             border-radius: 50px;
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-          }
-          input[type=range]::-ms-thumb {
+        }
+
+        input[type=range]::-ms-thumb {
             box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
             border: 0px solid #000000;
             height: 20px;
@@ -201,13 +236,15 @@
             border-radius: 7px;
             background: #65001c;
             cursor: pointer;
-          }
-          input[type=range]:focus::-ms-fill-lower {
+        }
+
+        input[type=range]:focus::-ms-fill-lower {
             background: #ac51b5;
-          }
-          input[type=range]:focus::-ms-fill-upper {
+        }
+
+        input[type=range]:focus::-ms-fill-upper {
             background: #ac51b5;
-          }
+        }
     }
 
     &__range-input { 
@@ -325,4 +362,9 @@ input:checked + .control__slider:before {
 
 .control__slider.control__round:before {   
     border-radius: .3rem;
+}
+
+
+@media only screen and (max-width:$bp-small) { 
+    
 }
