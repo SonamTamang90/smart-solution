@@ -43,17 +43,18 @@
 @import "components/device-modal";
 @import "components/form";
 @import "components/switch-button";
-@import "components/temperature-box"; 
-@import "components/theme"; 
+@import "components/temperature-panel"; 
+@import "components/theme-switch";   
 
 @import "layouts/banner";
 @import "layouts/header";
+@import "layouts/room-devices";
 @import "layouts/rooms";
 @import "layouts/scenarios";
 @import "layouts/sidebar";         
  
-@import "pages/home";   
- 
+@import "pages/home";      
+  
 @import "themes/theme";
 
 

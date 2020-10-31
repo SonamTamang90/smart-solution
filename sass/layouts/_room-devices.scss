@@ -1,0 +1,34 @@
+.rooms-devices {
+    grid-column: center-start / center-end;
+    @include padding($top: $pd-xlg, $bottom: $pd-xxlg);
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);     
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); 
+        grid-gap: 3rem;
+        margin-top: 3rem;
+    }
+     
+    //border-bottom: 1px solid #eee;
+}
+
+
+@media only screen and (max-width:$bp-small) {
+    .rooms-devices {
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
+            grid-gap: 1.2rem;
+            margin-top: 3rem;
+        }
+        
+        //border-bottom: 1px solid #eee;
+        // position: relative;
+    }
+} 

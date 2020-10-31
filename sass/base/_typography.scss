@@ -34,6 +34,7 @@
     text-transform: uppercase;
     letter-spacing: .2rem;
     line-height: 1;
+    animation: moveInLeft 3s; 
 }
 
 .heading-2 {
@@ -54,23 +55,43 @@
     text-transform: uppercase;
     line-height: 2; 
     letter-spacing: .2rem;
-    line-height: 1;
+    line-height: 1.5;
+    animation: moveInRight 4s 1s;
 }
+
+@media only screen and (max-width:$bp-medium) {
+    .heading-primary {
+
+        &--main {
+            font-size: 1.8rem; 
+            letter-spacing: .3rem;
+        }
+    
+        &--sub {
+            font-size: 2.4rem;
+        }
+    }
+
+    .heading-2 {
+        font-size: 2rem;
+        letter-spacing: .2rem;
+    } 
+}
+
 
 
 @media only screen and (max-width:$bp-small) {
     .heading-primary {
 
         &--main {
-            display: block;
-            font-size: 1.6rem; 
+            font-size: 1.4rem; 
             letter-spacing: .2rem;
-            margin-bottom: .5rem;
+            line-height: 1.9;
         }
     
         &--sub {
             display: block;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
     }
 

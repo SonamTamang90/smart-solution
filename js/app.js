@@ -37,10 +37,10 @@ function setTheme(themeName) {
 function toggleTheme() {
  if (localStorage.getItem('theme') === 'theme-dark'){
      setTheme('theme-light');
-     alert('Light Mode Activated')
+     alert('Light Mode Activate')
  } else {
      setTheme('theme-dark');
-     alert('Dark Mode Activated')
+     alert('Dark Mode Activate')
  }
 }
 
@@ -92,12 +92,16 @@ for (let [index] of btnsOpenModalArr){
  
 ////////////////////////////////////////////
 // DEVICE CONTROLLER PANEL 
-let range = document.getElementById('range');
-let container = document.getElementById('device-brightness');
+// let range = document.getElementById('range');
+// let container = document.getElementById('device-brightness');
 
-range.addEventListener('change', function() { 
-  container.style.filter = "brightness(" + range.value + "%)";
-});
+// range.addEventListener('change', function() { 
+//   container.style.filter = "brightness(" + range.value + "%)";
+// });
+
+////////////////////////////////////////////
+// DEVICE CONTROLLER PANEL 
+
 
 
 

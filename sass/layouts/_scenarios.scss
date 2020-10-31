@@ -96,6 +96,16 @@
 }
 
 
+@media only screen and (max-width: $bp-medium) {
+    .scenarios {    
+        &__content {
+            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));  
+            grid-gap: 1.2rem;
+            margin-top: 3rem;
+        }
+    }
+}
+
 @media only screen and (max-width:$bp-small) {
     .scenarios {    
         &__content {
@@ -103,10 +113,6 @@
             grid-gap: 1.2rem;
             margin-top: 3rem;
         }
-    }
-
-    .scenario {
-      
-    }    
+    }  
 }
 

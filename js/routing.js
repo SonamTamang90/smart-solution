@@ -4,7 +4,7 @@ document.querySelector('.dropdown-panel--signout').addEventListener('click', fun
 
 /////////////////////////////////////////
 // NAVIGATING TO PAGES
-document.getElementById('bed-room').addEventListener('click', function() {
+document.getElementById('living-room').addEventListener('click', function() {
     window.location.href = "room.html";
 });
 
