@@ -65,7 +65,7 @@ const btnsOpenModalArr = Array.from(btnsOpenModal).entries();
 
 for (let [index] of btnsOpenModalArr){
   let indexDevices = index;
-  console.log(indexDevices);
+  //console.log(indexDevices);
 
   const openModal = function () {
     modal[indexDevices].classList.remove('hidden');
@@ -100,8 +100,27 @@ for (let [index] of btnsOpenModalArr){
 // });
 
 ////////////////////////////////////////////
-// DEVICE CONTROLLER PANEL 
+// ADDING ROOM DEVICES FUNCTIONALITY
+var devices = [];
 
+// var deviceName = document.getElementById('devicename');
+// var deviceType = document.getElementById('devicetype');
+
+function getInput() {
+  return {
+    deviceName: document.getElementById('devicename').value,
+    deviceType: document.getElementById('devicetype').value 
+  }
+};
+
+function addNewDevice() {
+  //1. Get the input values
+  let input = getInput();
+  console.log(input);
+};
+
+
+document.getElementById('device-add').addEventListener('click', addNewDevice);
 
 
 

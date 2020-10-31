@@ -231,6 +231,73 @@ body {
         font-size: .1rem;
         color: #fff; } }
 
+.device-add {
+  background-color: #f3f3f3;
+  padding: 3rem; }
+  .device-add__heading {
+    display: flex;
+    justify-content: center;
+    margin-left: 3rem; }
+  .device-add__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.5rem; }
+  .device-add__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: #5f5d5d; }
+  .device-add__container {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .device-add__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .device-add__group {
+    margin-bottom: 2.5rem; }
+  .device-add__label {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 0.8rem; }
+  .device-add__input {
+    width: 70%;
+    display: inline-block;
+    padding: 1rem 4rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #fff;
+    border: 1px solid #999;
+    transition: all .3s; }
+    .device-add__input::-webkit-input-placeholder {
+      font-size: 1.5rem; }
+    .device-add__input:focus {
+      outline: none;
+      box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3); }
+  .device-add--add {
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 1.3rem 6rem;
+    background-color: #01baef;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 10rem;
+    transition: all .3s; }
+    .device-add--add:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3); }
+    .device-add--add:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1.8rem rgba(0, 0, 0, 0.3); }
+    .device-add--add:focus {
+      outline: none; }
+
 .room-device {
   position: relative;
   border: 3px solid #eee;

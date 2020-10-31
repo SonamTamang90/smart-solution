@@ -18,7 +18,7 @@
 <div class="container">
     <header class="header">
         <div class="header__logo-box">
-            <a href="#" class="header__logo">Smart Home</a>
+            <a href="index.html" class="header__logo">Smart Home</a>
         </div>
         <div class="theme">
             <label id="switch" class="theme__switch">
@@ -141,8 +141,8 @@
                 </div>
                 <h4 class="room-device__title">HD Camera +</h4>
             </div>
-
-            <div class="room-device">
+            
+            <div class="room-device" id="show-modal">
                 <div class="room-device__add">
                     <button class="room-device--add">
                         <svg class="room--add-icon">
@@ -285,66 +285,109 @@
         </div>
         <div class="overlay hidden"></div>
 
-          <!-- MODAL FOR DISPLAYING DEVICE CONTROLLER-->
-          <div class="modal hidden">
-            <button class="close-modal">
-                <svg class="close-modal__icon">
-                    <use xlink:href="img/sprite.svg#icon-x"></use>
-                </svg>
-            </button>
-            <h2 class="device-name">This is Third Working</h2>
-            <div class="device-control">
-                <nav class="device-control__nav">
-                    <ul class="device-control__list">
-                        <li class="device-control__item"><i class="ion-ios-snowy"></i></li>
-                        <li class="device-control__item"><i class="ion-ios-sunny-outline"></i></li>
-                        <li class="device-control__item"><i class="ion-ios-refresh-empty"></i></li>
-                    </ul>
-                </nav>
-                <div class="device-control__main">
-                    <div class="device-control__main-mode">Refrigeration mode</div>
-                    <div class="device-control__main-panel">
-                        <div class="device-control__main-info">
-                            <span class="device-control__main-value">26C</span>
-                            <p class="device-control__main-text">Current temp: 34 C</p>
-                        </div>
-                    </div>
-                    <div class="device-control__controller">
-                        <span class="device-control__plus"><i class="ion-ios-minus-empty"></i></span> 
-                        <label class="control__switch">
-                            <input type="checkbox" id="control__input">
-                            <span class="control__slider control__round"></span>
-                        </label> 
-                        <span class="device-control__minus"><i class="ion-ios-plus-empty"></i></span> 
+        <!-- MODAL FOR DISPLAYING DEVICE CONTROLLER-->
+        <div class="modal hidden">
+        <button class="close-modal">
+            <svg class="close-modal__icon">
+                <use xlink:href="img/sprite.svg#icon-x"></use>
+            </svg>
+        </button>
+        <h2 class="device-name">Add New Devices</h2>
+        <div class="device-control">
+            <nav class="device-control__nav">
+                <ul class="device-control__list">
+                    <li class="device-control__item"><i class="ion-ios-snowy"></i></li>
+                    <li class="device-control__item"><i class="ion-ios-sunny-outline"></i></li>
+                    <li class="device-control__item"><i class="ion-ios-refresh-empty"></i></li>
+                </ul>
+            </nav>
+            <div class="device-control__main">
+                <div class="device-control__main-mode">Refrigeration mode</div>
+                <div class="device-control__main-panel">
+                    <div class="device-control__main-info">
+                        <span class="device-control__main-value">26C</span>
+                        <p class="device-control__main-text">Current temp: 34 C</p>
                     </div>
                 </div>
-                <div class="device-control__cta">
-                    <button class="device-control__cta--power">
-                        <svg class="device-control__cta-icon">
-                            <use xlink:href="img/sprite.svg#icon-power"></use>
-                        </svg>
-                    </button>
-                    <button class="device-control__cta--sleep">
-                        <svg class="device-control__cta-icon">
-                            <use xlink:href="img/sprite.svg#icon-moon"></use>
-                        </svg>
-                    </button>
-                    <button class="device-control__cta--timing">
-                        <svg class="device-control__cta-icon">
-                            <use xlink:href="img/sprite.svg#icon-clock"></use>
-                        </svg>
-                    </button>
-                    <button class="device-control__cta--setup">
-                        <svg class="device-control__cta-icon">
-                            <use xlink:href="img/sprite.svg#icon-settings"></use>
-                        </svg>
-                    </button>
+                <div class="device-control__controller">
+                    <span class="device-control__plus"><i class="ion-ios-minus-empty"></i></span> 
+                    <label class="control__switch">
+                        <input type="checkbox" id="control__input">
+                        <span class="control__slider control__round"></span>
+                    </label> 
+                    <span class="device-control__minus"><i class="ion-ios-plus-empty"></i></span> 
                 </div>
             </div>
+            <div class="device-control__cta">
+                <button class="device-control__cta--power">
+                    <svg class="device-control__cta-icon">
+                        <use xlink:href="img/sprite.svg#icon-power"></use>
+                    </svg>
+                </button>
+                <button class="device-control__cta--sleep">
+                    <svg class="device-control__cta-icon">
+                        <use xlink:href="img/sprite.svg#icon-moon"></use>
+                    </svg>
+                </button>
+                <button class="device-control__cta--timing">
+                    <svg class="device-control__cta-icon">
+                        <use xlink:href="img/sprite.svg#icon-clock"></use>
+                    </svg>
+                </button>
+                <button class="device-control__cta--setup">
+                    <svg class="device-control__cta-icon">
+                        <use xlink:href="img/sprite.svg#icon-settings"></use>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="overlay hidden"></div>
-    </section>
-    <!-- YOUR ROOMS SECTION END -->  
+    </div>
+    <div class="overlay hidden"></div>
+</section>
+<!-- YOUR ROOMS SECTION END -->
+
+<!-- MODAL FOR DISPLAYING DEVICE CONTROLLER-->
+<div class="modal hidden">
+    <button class="close-modal">
+        <svg class="close-modal__icon">
+            <use xlink:href="img/sprite.svg#icon-x"></use>
+        </svg>
+    </button>
+    <div class="device-add">
+        <div class="device-add__heading">
+            <h2 class="device-add__title">Add New Devices</h2>
+            <svg class="device-add__icon">
+                <use xlink:href="img/sprite2.svg#icon-plug"></use>
+            </svg>
+        </div>
+        <div class="device-add__container">
+            <form action="#" class="device-add__form">
+                <div class="device-add__group">
+                    <label for="devicename" class="device-add__label">New Device</label>
+                    <input type="text" class="device-add__input" id="devicename" placeholder="Enter your device">
+                </div>
+                <div class="device-add__group">
+                    <label for="devicetype" class="device-add__label">Device Type</label>
+                    <input type="text" class="device-add__input" id="devicetype" placeholder="Enter your device type">
+                </div>
+                <!-- <div class="device-add__group">
+                    <label for="devicename" class="device-add__label">Connections</label>
+                    <input type="text" class="device-add__input" id="devicename" placeholder="Enter your device">
+                </div> -->
+                <!-- <div class="device-add__group">
+                    <label for="devicename" class="device-add__label">Set Timing</label>
+                    <input type="time" class="device-add__input" id="devicename" placeholder="Enter your device">
+                </div> -->
+                <div class="device-add__group">
+                    <button class="device-add--add" id="device-add" onclick="addNewDevice()">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="overlay hidden"></div>
+</section>
+<!-- YOUR ROOMS SECTION END -->  
     
 <script src="js/routing.js"></script>
 <script type="application/javascript" src="js/app.js"></script>
