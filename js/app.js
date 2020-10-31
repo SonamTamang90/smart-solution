@@ -101,26 +101,107 @@ for (let [index] of btnsOpenModalArr){
 
 ////////////////////////////////////////////
 // ADDING ROOM DEVICES FUNCTIONALITY
-var devices = [];
+let deviceController = (function() {
+  const devices = function(id, name, type) {
+    this.id = id;
+    this.name = name;
+    this.type = type;
+  };
 
-// var deviceName = document.getElementById('devicename');
-// var deviceType = document.getElementById('devicetype');
-
-function getInput() {
-  return {
-    deviceName: document.getElementById('devicename').value,
-    deviceType: document.getElementById('devicetype').value 
+  let data = {
+    allDevices: []
   }
-};
-
-function addNewDevice() {
-  //1. Get the input values
-  let input = getInput();
-  console.log(input);
-};
 
 
-document.getElementById('device-add').addEventListener('click', addNewDevice);
+  return {
+    addNewDevice: function(name, type) {
+      let ID, newDevice;
+
+      if(data.allDevices.length > 0) {
+        ID = data.allDevices[data.allDevices.length - 1].id + 1;
+      }else {
+        ID = 0;
+      }
+
+      newDevice = new devices(ID, name, type);
+
+      data.allDevices.push[newDevice];
+
+    },
+
+    testing: function() {
+      return data;
+    }
+  }
+})();
+
+
+let UIController = (function() {
+  var DOMstrings = {
+    inputDeviceName: '#device-name',
+    inputDeviceType: '#device-type',
+    addButton: '#device-add'
+  };
+
+  return {
+    getInput: function() {
+      return {
+        deviceName: document.getElementById(DOMstrings.inputDeviceName).value,
+        devieType: document.getElementById(DOMstrings.inputDeviceType).value 
+      }
+    },
+
+    addDevice: function(obj) {
+      let element, html, newHTML;
+
+      html = ` <div class="room-device" id="show-modal">
+                  <div class="room-device__icon">
+                      <i class="ion-ios-monitor-outline"></i>
+                  </div>
+                  <h4 class="room-device__title">%deviceName%</h4>
+                  <h4 class="room-device__title">%deviceType%</h4>
+              </div>`;
+      
+      newHTML = html.replace('%deviceName%', obj.name);
+      newHTML = html.replace('%deviceType', obj.type);
+
+      document.querySelector('.rooms-devices__content').insertAdjacentHTML('beforeend', newHTML);
+    }
+  }
+
+})();
+
+
+let controller = (function(deviceCtrl, UICtrl) {
+
+  let ctrlAddDevice = function() {
+    //1. Get the input values 
+    let input = UICtrl.getInput();
+
+    //2. Add to the Device Controller
+    let newDevice = deviceCtrl.addNewDevice(input.deviceName, input.devieType);
+
+    //3. Display in the UI
+    UICtrl.addDevice(newDevice);
+
+    //4. Clear the input fields
+  }
+
+  const setEventListener = function() {
+    document.getElementById('device-add').addEventListener('click', ctrlAddDevice);
+  };
+
+  return {
+    init: function() {
+      setEventListener();
+    }
+  }
+
+})(deviceController, UIController);
+
+controller.init();
+
+
 
 
 
