@@ -21,20 +21,24 @@
         @media only screen and (max-width:850px) {
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
             grid-gap: 2rem;
-        }          
+        } 
 
         @media only screen and (max-width:$bp-medium) {
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
             grid-gap: 2rem;
         } 
 
-        @media only screen and (max-width: $bp-small) {
-            margin-top: 2rem;  
+        @media only screen and (max-width: 46em) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 1.5rem;
+        } 
+
+        @include respond(bp-small) {
             grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
             grid-gap: 1.2rem;
         }
 
-        @media only screen and (max-width: $bp-xsmall) {
+        @include respond(bp-xsmall) {
             margin-top: 1.5rem;  
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
             grid-gap: 1.2rem;
@@ -123,23 +127,4 @@
 }
 
 
-// @media only screen and (max-width: $bp-medium) {
-//     .scenarios {    
-//         &__content {
-//             grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));  
-//             grid-gap: 1.2rem;
-//             margin-top: 3rem;
-//         }
-//     }
-// }
-
-// @media only screen and (max-width:$bp-small) {
-//     .scenarios {    
-//         &__content {
-//             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));  
-//             grid-gap: 1.2rem;
-//             margin-top: 3rem;
-//         }
-//     }  
-// }
 

@@ -2,8 +2,6 @@
     grid-column: center-start / center-end;
     @include padding($top: $pd-xlg, $bottom: $pd-md);
 
-    
-
     &__top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);     
@@ -25,17 +23,17 @@
             grid-gap: 2rem;
         } 
 
-        // @media only screen and (max-width: 46em) {
-        //     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-        //     grid-gap: 1.5rem;
-        // } 
+        @media only screen and (max-width: 46em) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 1.5rem;
+        } 
 
-        @media only screen and (max-width: $bp-small) {
+        @include respond(bp-small) {
             grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
             grid-gap: 1.2rem;
         }
 
-        @media only screen and (max-width: $bp-xsmall) {
+        @include respond(bp-xsmall) {
             margin-top: 1.5rem;  
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
             grid-gap: 1.2rem;

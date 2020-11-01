@@ -12,18 +12,13 @@
         grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); 
         grid-gap: 3rem;
         margin-top: 3rem;
-    }
-}
 
-
-@media only screen and (max-width:$bp-small) {
-    .rooms-devices {
-
-        &__content {
+        @include respond(bp-small) {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); 
             grid-gap: 1.2rem;
             margin-top: 3rem;
         }
     }
-} 
+}
+ 

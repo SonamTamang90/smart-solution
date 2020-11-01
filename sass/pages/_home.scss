@@ -9,28 +9,27 @@
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) 
                         [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end] ;   
                         
-    @media only screen and (max-width:$bp-large) {
+    @include respond(bp-large) {
         max-width: 100%;
         margin: 0; 
     }
 
-    @media only screen and (max-width:$bp-medium) {
+    @include respond(bp-medium) {
         max-width: 100%;
         margin: 0;    
         grid-template-rows: 7rem 60vh repeat(2, min-content) 6rem;
         grid-template-columns: [full-start] minmax(3rem, 1fr) 
                             [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) 
-                            [center-end] minmax(3rem, 1fr) [full-end] ;   
+                            [center-end] minmax(3rem, 1fr) [full-end] ;  
     }
 
-    @media only screen and (max-width:$bp-small) {
+    @include respond(bp-small) {
         max-width: 100%;
         margin: 0;    
         grid-template-rows: 7rem 45vh repeat(2, min-content) 6rem;
         grid-template-columns: [full-start] minmax(3rem, 1fr) 
                             [center-start] repeat(8,[col-start] minmax(min-content, 12rem) [col-end]) 
                             [center-end] minmax(3rem, 1fr) [full-end] ;   
-                            
     }
 }   
 
@@ -51,14 +50,6 @@
     background-color: $color-white;
     padding: 6rem;
     box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .3);
-
-    @media only screen and (max-width: $bp-small) {
-        // position: relative;
-        // transform: translate(-50%, -50%);
-        // background-color: $color-white;
-        // padding: 6rem; 
-        // box-shadow: none;
-    }
  }
 
 //  @media only screen and (max-width: $bp-large) {

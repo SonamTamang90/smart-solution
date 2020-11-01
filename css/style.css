@@ -660,6 +660,11 @@ p {
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 8000; }
+  @media (max-width: 37.5em) {
+    .modal {
+      top: 63%;
+      left: 50%;
+      width: 100%; } }
 
 .overlay {
   position: absolute;
@@ -668,136 +673,6 @@ p {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(3px); }
-
-.newmodal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  transform: scale(1.1);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
-
-.modal-content {
-  align-self: center;
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.5rem; }
-
-.btn-close {
-  float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: lightgray; }
-
-@media only screen and (max-width: 37.5em) {
-  .show-modal {
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 1.75rem 4rem;
-    margin: 5rem 2rem;
-    border: none;
-    background-color: #fff;
-    color: #444;
-    border-radius: 10rem;
-    cursor: pointer;
-    transition: all 5s; }
-  .close-modal {
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    font-size: 5rem;
-    color: #333;
-    cursor: pointer;
-    border: none;
-    background: none;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    border: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0.3rem 6rem rgba(0, 0, 0, 0.3);
-    transition: all .3s; }
-    .close-modal:focus {
-      outline: none; }
-    .close-modal:hover {
-      background-color: #01baef;
-      border: none; }
-    .close-modal:hover .close-modal__icon {
-      fill: #fff; }
-    .close-modal__icon {
-      width: 1.5rem;
-      height: 1.5rem; }
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem; }
-  p {
-    font-size: 1.8rem; }
-  /* -------------------------- */
-  /* CLASSES TO MAKE MODAL WORK */
-  .hidden {
-    display: none; }
-  .modal {
-    position: absolute;
-    top: 66%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 55%;
-    background-color: white;
-    padding: 4.3rem;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10; }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(3px);
-    z-index: 5; }
-  .newmodal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
-  .modal-content {
-    align-self: center;
-    background-color: white;
-    padding: 1rem 1.5rem;
-    width: 24rem;
-    border-radius: 0.5rem; }
-  .btn-close {
-    float: right;
-    width: 1.5rem;
-    line-height: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 0.25rem;
-    background-color: lightgray; } }
 
 .form {
   display: flex;
@@ -1319,13 +1194,12 @@ input:checked + .slider {
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     grid-gap: 3rem;
     margin-top: 3rem; }
-
-@media only screen and (max-width: 37.5em) {
-  .rooms-devices__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-gap: 1.2rem;
-    margin-top: 3rem; } }
+    @media (max-width: 37.5em) {
+      .rooms-devices__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 1.2rem;
+        margin-top: 3rem; } }
 
 .rooms {
   grid-column: center-start / center-end;
@@ -1348,11 +1222,15 @@ input:checked + .slider {
       .rooms__content {
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         grid-gap: 2rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 46em) {
+      .rooms__content {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 1.5rem; } }
+    @media (max-width: 37.5em) {
       .rooms__content {
         grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
         grid-gap: 1.2rem; } }
-    @media only screen and (max-width: 25em) {
+    @media (max-width: 25em) {
       .rooms__content {
         margin-top: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -1438,12 +1316,15 @@ input:checked + .slider {
       .scenarios__content {
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
         grid-gap: 2rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 46em) {
       .scenarios__content {
-        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 1.5rem; } }
+    @media (max-width: 37.5em) {
+      .scenarios__content {
         grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
         grid-gap: 1.2rem; } }
-    @media only screen and (max-width: 25em) {
+    @media (max-width: 25em) {
       .scenarios__content {
         margin-top: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
@@ -1511,14 +1392,14 @@ input:checked + .slider {
   border-right: 1px solid var(--border-line);
   grid-column: sidebar-start / sidebar-end;
   grid-row: 2 / -1; }
-  @media only screen and (max-width: 50em) {
+  @media (max-width: 50em) {
     .sidebar {
       grid-column: 1 / -1;
       grid-row: 5 / -1;
       display: flex;
       justify-content: center;
       align-items: center; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .sidebar {
       grid-column: 1 / -1;
       grid-row: 5 / -1;
@@ -1532,14 +1413,14 @@ input:checked + .slider {
     justify-items: center;
     align-items: center;
     margin-top: 7rem; }
-    @media only screen and (max-width: 50em) {
+    @media (max-width: 50em) {
       .sidebar__list {
         flex-direction: row;
         justify-content: space-evenly;
         justify-items: center;
         align-items: center;
         margin-top: 0; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .sidebar__list {
         flex-direction: row;
         justify-content: space-evenly;
@@ -1548,12 +1429,12 @@ input:checked + .slider {
         margin-top: 0; } }
   .sidebar__item {
     margin-bottom: 4rem; }
-    @media only screen and (max-width: 50em) {
+    @media (max-width: 50em) {
       .sidebar__item {
         margin-bottom: 0rem; }
         .sidebar__item:not(:last-child) {
           margin-right: 10rem; } }
-    @media only screen and (max-width: 37.5em) {
+    @media (max-width: 37.5em) {
       .sidebar__item {
         margin-bottom: 0rem; }
         .sidebar__item:not(:last-child) {
@@ -1587,17 +1468,17 @@ input:checked + .slider {
   display: grid;
   grid-template-rows: 7rem 60vh repeat(2, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
-  @media only screen and (max-width: 62.5em) {
+  @media (max-width: 62.5em) {
     .container {
       max-width: 100%;
       margin: 0; } }
-  @media only screen and (max-width: 50em) {
+  @media (max-width: 50em) {
     .container {
       max-width: 100%;
       margin: 0;
       grid-template-rows: 7rem 60vh repeat(2, min-content) 6rem;
       grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .container {
       max-width: 100%;
       margin: 0;
