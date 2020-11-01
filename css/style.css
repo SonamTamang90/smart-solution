@@ -1228,7 +1228,7 @@ input:checked + .slider {
         grid-gap: 1.5rem; } }
     @media (max-width: 37.5em) {
       .rooms__content {
-        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
         grid-gap: 1.2rem; } }
     @media (max-width: 25em) {
       .rooms__content {
@@ -1322,7 +1322,7 @@ input:checked + .slider {
         grid-gap: 1.5rem; } }
     @media (max-width: 37.5em) {
       .scenarios__content {
-        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
         grid-gap: 1.2rem; } }
     @media (max-width: 25em) {
       .scenarios__content {
