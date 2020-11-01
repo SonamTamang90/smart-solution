@@ -2,7 +2,6 @@
     grid-column: center-start / center-end;
     @include padding($top: $pd-xlg, $bottom: $pd-md);
 
-
     @include respond(bp-small) {
         @include padding($top: $pd-sm, $bottom: $pd-sm);
     }

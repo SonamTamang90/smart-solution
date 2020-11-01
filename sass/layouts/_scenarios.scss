@@ -8,10 +8,6 @@
         @include margin($bottom: 0)
     }
 
-    @media only screen and (max-width: $bp-small) {
-       
-    }
-
     &__top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);     
