@@ -2,6 +2,11 @@
     grid-column: center-start / center-end;
     @include padding($top: $pd-xlg, $bottom: $pd-md);
 
+
+    @include respond(bp-small) {
+        @include padding($top: $pd-sm, $bottom: $pd-sm);
+    }
+
     &__top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);     

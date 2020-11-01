@@ -3,8 +3,13 @@
     @include padding($top: $pd-sm, $bottom: $pd-lg);
     @include margin($bottom: $mb-l); 
 
+    @include respond(bp-small) {
+        @include padding($top: $pd-sm, $bottom: $pd-sm); 
+        @include margin($bottom: 0)
+    }
+
     @media only screen and (max-width: $bp-small) {
-        @include padding($top: $pd-md, $bottom: $pd-lg); 
+       
     }
 
     &__top {
@@ -90,7 +95,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
 
         &-text {
             font-family: $font-primary;

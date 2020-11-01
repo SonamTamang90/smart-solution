@@ -92,7 +92,7 @@ body {
   animation: moveInLeft 3s; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary--main {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       margin-bottom: 0.5rem; } }
   @media only screen and (max-width: 25em) {
     .heading-primary--main {
@@ -108,7 +108,7 @@ body {
   animation: moveInRight 4s 1s; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary--sub {
-      font-size: 2.2rem; } }
+      font-size: 1.7rem; } }
   @media only screen and (max-width: 25em) {
     .heading-primary--sub {
       font-size: 1.7rem; } }
@@ -1206,6 +1206,10 @@ input:checked + .slider {
   padding-top: 8rem;
   padding-bottom: 4rem;
   border-bottom: 1px solid #eee; }
+  @media (max-width: 37.5em) {
+    .rooms {
+      padding-top: 3rem;
+      padding-bottom: 3rem; } }
   .rooms__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
@@ -1296,10 +1300,11 @@ input:checked + .slider {
   padding-top: 3rem;
   padding-bottom: 6rem;
   margin-bottom: 3rem; }
-  @media only screen and (max-width: 37.5em) {
+  @media (max-width: 37.5em) {
     .scenarios {
-      padding-top: 4rem;
-      padding-bottom: 6rem; } }
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      margin-bottom: 0; } }
   .scenarios__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
@@ -1482,7 +1487,7 @@ input:checked + .slider {
     .container {
       max-width: 100%;
       margin: 0;
-      grid-template-rows: 7rem 45vh repeat(2, min-content) 6rem;
+      grid-template-rows: 7rem 35vh repeat(2, min-content) 6rem;
       grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
 
 .login {

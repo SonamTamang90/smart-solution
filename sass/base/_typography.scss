@@ -16,7 +16,7 @@
         animation: moveInLeft 3s;  
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             @include margin($bottom: .5rem);
         }
 
@@ -37,7 +37,7 @@
         animation: moveInRight 4s 1s;
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 2.2rem;
+            font-size: 1.7rem;
         }
 
         @media only screen and (max-width: $bp-xsmall) {
