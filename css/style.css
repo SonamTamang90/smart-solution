@@ -1029,7 +1029,7 @@ input:checked + .slider {
     @media only screen and (max-width: 37.5em) {
       .banner__text-box {
         top: 50%;
-        left: 33%; } }
+        left: 38%; } }
   .banner__info {
     font-size: 1.4rem;
     color: #fff;
@@ -1336,8 +1336,8 @@ input:checked + .slider {
         grid-gap: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .rooms__content {
-        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-        grid-gap: 1.5rem; } }
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 1.2rem; } }
 
 .room {
   position: relative;
@@ -1422,8 +1422,8 @@ input:checked + .slider {
     @media only screen and (max-width: 37.5em) {
       .scenarios__content {
         margin-top: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-        grid-gap: 1.5rem; } }
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 1.2rem; } }
 
 .scenario {
   position: relative;
@@ -1575,12 +1575,15 @@ input:checked + .slider {
     .container {
       max-width: 100%;
       margin: 0;
-      grid-template-rows: 7rem 60vh repeat(2, min-content) 6rem;
+      grid-template-rows: 7rem 45vh repeat(2, min-content) 6rem;
       grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
 
 .login {
   height: 100vh;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .login {
+      width: 100%; } }
 
 .login__content {
   position: absolute;
