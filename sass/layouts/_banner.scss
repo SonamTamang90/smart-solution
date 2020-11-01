@@ -1,16 +1,37 @@
 .banner {
     grid-column: full-start / full-end;
-
     background-image:linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url("../img/hero.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
+
+    @media only screen and (max-width:$bp-medium) { 
+
+    }
 
     &__text-box {
         position: absolute; 
         top: 55%;
         left: 32%; 
         transform: translate(-50%, -50%);
+
+      
+
+        @media only screen and (max-width:$bp-medium) { 
+            top: 50%;
+            left: 35%;
+        }
+
+        @media only screen and (max-width:$bp-medium) { 
+            top: 50%;
+            left: 35%;
+        }
+
+        @media only screen and (max-width:$bp-small) { 
+            top: 50%;
+            left: 33%;
+        }
+
     }
 
     &__info {
@@ -35,7 +56,6 @@
 
 .page-banner {
     grid-column: full-start / full-end;
-
     background-image:linear-gradient(rgba($color-black, .5), rgba($color-black, .5)), url("../img/livingroom.jpg");
     background-size: cover;
     background-position: center;
@@ -89,63 +109,63 @@
     }
 }
 
-@media only screen and (max-width:$bp-medium) {
-    .banner {      
-        &__text-box {
-            position: absolute; 
-            top: 50%;
-            left: 40%; 
-            transform: translate(-50%, -50%);
-        }
+// @media only screen and (max-width:$bp-medium) {
+//     .banner {      
+//         &__text-box {
+//             position: absolute; 
+//             top: 50%;
+//             left: 40%; 
+//             transform: translate(-50%, -50%);
+//         }
     
-        &__info {
-            font-size: 1.6rem;   
-            letter-spacing: .5rem; 
+//         &__info {
+//             font-size: 1.6rem;   
+//             letter-spacing: .5rem; 
                   
-            &-rooms {  
-                margin-right: 1.5rem;   
-            }  
+//             &-rooms {  
+//                 margin-right: 1.5rem;   
+//             }  
     
-            &-devices {
+//             &-devices {
     
-            }
+//             }
     
-        }
-    }
-} 
+//         }
+//     }
+// } 
 
 
-@media only screen and (max-width:$bp-small) {
-    .banner {      
-        &__text-box {
-            position: absolute; 
-            top: 50%;
-            left: 40%; 
-            transform: translate(-50%, -50%);
-        }
+// @media only screen and (max-width:$bp-small) {
+//     .banner {      
+//         &__text-box {
+//             position: absolute; 
+//             top: 50%;
+//             left: 40%; 
+//             transform: translate(-50%, -50%);
+//         }
     
-        &__info {
-            font-size: 1.3rem;  
-            letter-spacing: .5rem; 
+//         &__info {
+//             font-size: 1.3rem;  
+//             letter-spacing: .5rem; 
                   
-            &-rooms {  
-                margin-right: 1.5rem;   
-            }  
+//             &-rooms {  
+//                 margin-right: 1.5rem;   
+//             }  
     
-            &-devices {
+//             &-devices {
     
-            }
+//             }
     
-        }
-    }
-}
+//         }
+//     }
+// }
 
 
-@media only screen and (max-width:$bp-large) {
-    &__text-box {
-        position: absolute; 
-        top: 50%;
-        left: 38%; 
-        transform: translate(-50%, -50%);
-    }
-}
+// @media only screen and (max-width:$bp-large) {
+//     &__text-box {
+//         position: absolute; 
+//         top: 50%;
+//         left: 38%; 
+//         transform: translate(-50%, -50%);
+//     }
+// }

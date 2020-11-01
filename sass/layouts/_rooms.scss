@@ -1,6 +1,8 @@
 .rooms {
     grid-column: center-start / center-end;
-    @include padding($top: $pd-xlg, $bottom: $pd-sm);
+    @include padding($top: $pd-xlg, $bottom: $pd-md);
+
+    
 
     &__top {
         display: grid;
@@ -12,6 +14,30 @@
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-gap: 3rem;
         margin-top: 3rem;
+
+        
+
+        @media only screen and (max-width:850px) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 2rem;
+        } 
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 2rem;
+        } 
+
+        // @media only screen and (max-width: 46em) {
+        //     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        //     grid-gap: 1.5rem;
+        // } 
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+            grid-gap: 1.5rem;
+        }
+
+     
     }
     
     border-bottom: 1px solid #eee;
@@ -89,28 +115,22 @@
             height: 1.8rem;
             fill: $color-white;
         }
+
+
     }
 }
 
-@media only screen and (max-width:$bp-medium) {
-    .rooms {    
-        &__content {
-            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));  
-            grid-gap: 1.2rem;
-            margin-top: 3rem;
-        }
-    }
-} 
 
 
-@media only screen and (max-width:$bp-small) {
-    .rooms {    
-        &__content {
-            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));  
-            grid-gap: 1.2rem;
-            margin-top: 3rem;
-        }
-    }
-} 
+
+// @media only screen and (max-width:$bp-small) {
+//     .rooms {    
+//         &__content {
+//             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));  
+//             grid-gap: 1.2rem;
+//             margin-top: 3rem;
+//         }
+//     }
+// } 
 
 

@@ -3,6 +3,10 @@
     @include padding($top: $pd-sm, $bottom: $pd-sm);
     @include margin($bottom: $mb-l); 
 
+    @media only screen and (max-width: $bp-small) {
+        @include padding($top: $pd-md, $bottom: $pd-lg); 
+    }
+
     &__top {
         display: grid;
         grid-template-columns: repeat(2, 1fr);     
@@ -12,10 +16,26 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-gap: 3rem;
-        margin-top: 3rem;
+        margin-top: 3rem;     
+
+        @media only screen and (max-width:850px) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 2rem;
+        }          
+
+        @media only screen and (max-width:$bp-medium) {
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            grid-gap: 2rem;
+        } 
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 2rem;  
+            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+            grid-gap: 1.5rem;
+        }
     }
-    
-    padding-bottom: 8rem;
+
+   
 }
 
 .scenario {
@@ -96,23 +116,23 @@
 }
 
 
-@media only screen and (max-width: $bp-medium) {
-    .scenarios {    
-        &__content {
-            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));  
-            grid-gap: 1.2rem;
-            margin-top: 3rem;
-        }
-    }
-}
+// @media only screen and (max-width: $bp-medium) {
+//     .scenarios {    
+//         &__content {
+//             grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));  
+//             grid-gap: 1.2rem;
+//             margin-top: 3rem;
+//         }
+//     }
+// }
 
-@media only screen and (max-width:$bp-small) {
-    .scenarios {    
-        &__content {
-            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));  
-            grid-gap: 1.2rem;
-            margin-top: 3rem;
-        }
-    }  
-}
+// @media only screen and (max-width:$bp-small) {
+//     .scenarios {    
+//         &__content {
+//             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));  
+//             grid-gap: 1.2rem;
+//             margin-top: 3rem;
+//         }
+//     }  
+// }
 
