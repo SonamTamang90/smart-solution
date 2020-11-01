@@ -25,11 +25,17 @@
     }
 
     &__item {
-
-
+        cursor: pointer;
+        transition: all .3s;
         i {
             display: inline-block;
             font-size: 3rem;
+            transition: all .2s;
+        }
+
+        &:hover i {
+            transform: scale(1.1);
+            color: $color-primary;
         }
     }
 

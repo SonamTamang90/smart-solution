@@ -15,8 +15,6 @@
         grid-gap: 3rem;
         margin-top: 3rem;
 
-        
-
         @media only screen and (max-width:850px) {
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
             grid-gap: 2rem;
@@ -33,6 +31,12 @@
         // } 
 
         @media only screen and (max-width: $bp-small) {
+            grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+            grid-gap: 1.2rem;
+        }
+
+        @media only screen and (max-width: $bp-xsmall) {
+            margin-top: 1.5rem;  
             grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
             grid-gap: 1.2rem;
         }
@@ -83,6 +87,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
 
         &-text {
             font-family: $font-primary;

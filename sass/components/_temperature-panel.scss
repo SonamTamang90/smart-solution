@@ -20,12 +20,18 @@
         height: 2.5rem;
         fill: $color-white;
         margin-right: .8rem;
+
+       
     }
 
     &__degree { 
         span {
             font-size: 1.8rem; 
             margin-right: -.6rem;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.6rem; 
+            }
         }
       
         display: flex;
@@ -51,24 +57,29 @@
         font-size: 1.3rem;  
         display: flex;
         flex-direction: column;
-    }
-} 
 
-@media only screen and (max-width:$bp-medium) {
-    .temperature-box { 
-          
-        &__humidity {
-            font-size: 1.6rem;  
-            display: flex;
-            flex-direction: column;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem; 
+            font-weight: 300;
         }
-    }  
+    }
 } 
 
+// @media only screen and (max-width:$bp-medium) {
+//     .temperature-box { 
+          
+//         &__humidity {
+//             font-size: 1.6rem;  
+//             display: flex;
+//             flex-direction: column;
+//         }
+//     }  
+// } 
 
 
-@media only screen and (max-width:$bp-small) {
-    .temperature-box {
-        margin-top: 1rem;
-    }
-}
+
+// @media only screen and (max-width:$bp-small) {
+//     .temperature-box {
+//         margin-top: 1rem;
+//     }
+// }

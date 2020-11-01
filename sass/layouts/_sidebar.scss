@@ -78,6 +78,10 @@
             transition: all .3s;
         }
 
+        &--active {
+            background-color: $color-primary;
+        }
+        
         &:hover {
             background-color: $color-primary;
         }
