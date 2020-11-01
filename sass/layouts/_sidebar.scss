@@ -13,7 +13,8 @@
         align-items: center; 
     }
 
-    @include respond(bp-small) {
+    @include respond(bp-small) {  
+        background-color: var(--color-secondary);
         position: fixed;
         bottom: 0;
         left: 0;
@@ -73,6 +74,7 @@
     }
 
     &__link {
+        
       
         &:link,
         &:visited {
@@ -81,15 +83,22 @@
             border-radius: .5rem;
             padding: .8rem;
             transition: all .3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         &--active {
             background-color: $color-primary;
         }
+
         
-        &:hover {
-            background-color: $color-primary;
-        }
+        
+        // &:hover { 
+        //     fill: $color-primary;
+        // }
+
+       
 
         &-text {
             font-size: 1.5rem;
@@ -101,9 +110,29 @@
     }
 
     &__icon {
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         fill: $color-grey-light-1;
+        transition: fill .3s;
+
+        &:hover {
+            fill: $color-primary;
+        }
+
+        @include respond(bp-small) {
+            fill: var(--font-color);
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        color: $color-grey-light-1;
+        transition: color .3s;
+
+        @include respond(bp-small) {
+            font-size: 1.4rem;
+            color: var(--font-color);
+        }
     }
 }
 

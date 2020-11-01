@@ -86,13 +86,13 @@ body {
   font-size: 1.7rem;
   font-weight: 400;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: 2;
   letter-spacing: .2rem;
   animation: moveInLeft 3s; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary--main {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 0.5rem; } }
   @media only screen and (max-width: 25em) {
     .heading-primary--main {
@@ -108,7 +108,7 @@ body {
   animation: moveInRight 4s 1s; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary--sub {
-      font-size: 1.7rem; } }
+      font-size: 1.4rem; } }
   @media only screen and (max-width: 25em) {
     .heading-primary--sub {
       font-size: 1.7rem; } }
@@ -1203,8 +1203,8 @@ input:checked + .slider {
 
 .rooms {
   grid-column: center-start / center-end;
-  padding-top: 8rem;
-  padding-bottom: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
   border-bottom: 1px solid #eee; }
   @media (max-width: 37.5em) {
     .rooms {
@@ -1253,10 +1253,11 @@ input:checked + .slider {
     width: 100%;
     border-radius: .8rem;
     z-index: 5;
-    filter: brightness(79%); }
+    filter: brightness(75%); }
   .room__title {
     font-family: "Nunito", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
     color: #fff;
     text-transform: uppercase;
     position: absolute;
@@ -1274,7 +1275,8 @@ input:checked + .slider {
     justify-content: center; }
     .room__add-text {
       font-family: "Nunito", sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.3rem;
+      letter-spacing: .1rem;
       color: var(--font-color);
       text-transform: uppercase; }
   .room--add {
@@ -1298,7 +1300,7 @@ input:checked + .slider {
 .scenarios {
   grid-column: center-start / center-end;
   padding-top: 3rem;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   margin-bottom: 3rem; }
   @media (max-width: 37.5em) {
     .scenarios {
@@ -1349,10 +1351,11 @@ input:checked + .slider {
     width: 100%;
     border-radius: .8rem;
     z-index: 5;
-    filter: brightness(79%); }
+    filter: brightness(70%); }
   .scenario__title {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
     font-weight: 400;
     color: #fff;
     text-transform: uppercase;
@@ -1371,7 +1374,8 @@ input:checked + .slider {
     justify-content: center; }
     .scenario__add-text {
       font-family: "Nunito", sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.3rem;
+      letter-spacing: .1rem;
       color: var(--font-color);
       text-transform: uppercase; }
   .scenario--add {
@@ -1406,6 +1410,7 @@ input:checked + .slider {
       align-items: center; } }
   @media (max-width: 37.5em) {
     .sidebar {
+      background-color: var(--color-secondary);
       position: fixed;
       bottom: 0;
       left: 0;
@@ -1454,10 +1459,11 @@ input:checked + .slider {
     text-decoration: none;
     border-radius: .5rem;
     padding: .8rem;
-    transition: all .3s; }
+    transition: all .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .sidebar__link--active {
-    background-color: #01baef; }
-  .sidebar__link:hover {
     background-color: #01baef; }
   .sidebar__link-text {
     font-size: 1.5rem;
@@ -1465,9 +1471,23 @@ input:checked + .slider {
     justify-self: start;
     align-items: flex-start; }
   .sidebar__icon {
-    width: 3rem;
-    height: 3rem;
-    fill: #faf9f9; }
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #faf9f9;
+    transition: fill .3s; }
+    .sidebar__icon:hover {
+      fill: #01baef; }
+    @media (max-width: 37.5em) {
+      .sidebar__icon {
+        fill: var(--font-color); } }
+  .sidebar__title {
+    font-size: 1rem;
+    color: #faf9f9;
+    transition: color .3s; }
+    @media (max-width: 37.5em) {
+      .sidebar__title {
+        font-size: 1.4rem;
+        color: var(--font-color); } }
 
 .container {
   position: relative;
@@ -1477,7 +1497,7 @@ input:checked + .slider {
   margin: 8rem auto;
   display: grid;
   grid-template-rows: 7rem 60vh repeat(2, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; }
   @media (max-width: 62.5em) {
     .container {
       max-width: 100%;
@@ -1513,7 +1533,7 @@ input:checked + .slider {
 
 .theme-light {
   --color-primary: #0060df;
-  --color-secondary: #fbfbfe;
+  --color-secondary: #ffff;
   --color-accent: #fd6f53;
   --font-color: #000000;
   --border-radius: #777;

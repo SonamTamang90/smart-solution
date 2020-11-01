@@ -10,13 +10,13 @@
         font-size: 1.7rem; 
         font-weight: 400;
         color: $color-white; 
-        text-transform: uppercase;
+        text-transform: capitalize;
         line-height: 2; 
         letter-spacing: .2rem;
         animation: moveInLeft 3s;  
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             @include margin($bottom: .5rem);
         }
 
@@ -37,7 +37,7 @@
         animation: moveInRight 4s 1s;
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
         }
 
         @media only screen and (max-width: $bp-xsmall) {
