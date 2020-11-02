@@ -1,6 +1,6 @@
 .rooms-devices {
     grid-column: center-start / center-end;
-    @include padding($top: $pd-xlg, $bottom: $pd-xxlg);
+    @include padding($top: $pd-md, $bottom: $pd-lg);
 
     &__top {
         display: grid;
@@ -9,8 +9,8 @@
 
     &__content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr)); 
-        grid-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));   
+        grid-gap: 2.8rem;
         margin-top: 3rem;
 
         @include respond(bp-small) {

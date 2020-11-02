@@ -58,6 +58,7 @@
 
     &:hover:not(:last-child) {
         box-shadow: 0 .5rem 1rem rgba($color-black, .3);
+        transform: translateY(-4px);
     }
 
     &__photo {
@@ -106,9 +107,6 @@
         cursor: pointer;
         background: none;
         border: none;
-        background-color: $color-primary;
-        height: 4rem;
-        width: 4rem;
         border-radius: 50%;
         margin-bottom: 1.3rem;
 
@@ -116,14 +114,10 @@
             outline: none;
         }
 
-        &:hover {
-            background-color: $color-primary-dark;
-        }
-
         &-icon {
-            width: 1.8rem;
-            height: 1.8rem;
-            fill: $color-white;
+            width: 3.5rem;
+            height:3.5rem;
+            fill: $color-primary;
         }
     }
 }
