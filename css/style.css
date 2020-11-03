@@ -339,6 +339,14 @@ body {
     right: 1.5rem;
     top: 3rem;
     text-transform: uppercase; }
+    @media (max-width: 37.5em) {
+      .room-device__active {
+        right: .7rem;
+        top: 3rem; } }
+    @media (max-width: 25em) {
+      .room-device__active {
+        right: .5rem;
+        top: 3rem; } }
     .room-device__active-current {
       display: inline-block;
       height: 1rem;

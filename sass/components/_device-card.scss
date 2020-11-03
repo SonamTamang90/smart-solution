@@ -50,6 +50,16 @@
         top: 3rem;
         text-transform: uppercase;
 
+        @include respond(bp-small) {
+            right: .7rem;
+            top: 3rem;  
+        }
+
+        @include respond(bp-xsmall) {
+            right: .5rem;
+            top: 3rem;  
+        }
+
         &-current {
             display: inline-block;
             height: 1rem;
