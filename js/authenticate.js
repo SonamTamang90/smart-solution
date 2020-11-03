@@ -1,3 +1,5 @@
+//////////////////////////////////////////
+// LOGIN PAGE AUTHENTICATION
 const attempt = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 function validate(e){

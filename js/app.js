@@ -1,13 +1,6 @@
 'use strict';
 //////////////////////////////////////
-// Nav toggle
-
-
-
-
-
-//////////////////////////////////////
-// Cross broswer compability 
+// Detecting broswer
 function myFunction() { 
   if(navigator.userAgent.indexOf("Chrome") != -1 )
     {
@@ -34,8 +27,6 @@ function myFunction() {
       alert('Unknown Browser');
     }
 }
-
-
 
 /////////////////////////////////////////
 // User Nav dropdown menu
@@ -75,10 +66,10 @@ function setTheme(themeName) {
 function toggleTheme() {
  if (localStorage.getItem('theme') === 'theme-dark'){
      setTheme('theme-light');
-     alert('Light Mode Activate')
+     alert('Activate Light Mode')
  } else {
      setTheme('theme-dark');
-     alert('Dark Mode Activate')
+     alert('Activate Dark Mode')
  }
 }
 
@@ -136,6 +127,7 @@ for (let [index] of btnsOpenModalArr){
 // range.addEventListener('change', function() { 
 //   container.style.filter = "brightness(" + range.value + "%)";
 // });
+
 
 
 
