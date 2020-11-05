@@ -119,14 +119,6 @@ for (let [index] of btnsOpenModalArr){
   });
 };
  
-////////////////////////////////////////////
-// DEVICE CONTROLLER PANEL 
-// let range = document.getElementById('range');
-// let container = document.getElementById('device-brightness');
-
-// range.addEventListener('change', function() { 
-//   container.style.filter = "brightness(" + range.value + "%)";
-// });
 
 
 

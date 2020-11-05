@@ -13,10 +13,11 @@
         text-transform: capitalize;
         line-height: 2; 
         letter-spacing: .2rem;
-        animation: moveInLeft 3s;  
+        // animation: moveInLeft 3s;  
+        animation: fadeOut 3s;
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 1.6rem;
+            font-size: 1.6rem;  
             @include margin($bottom: .5rem);
         }
 
@@ -34,7 +35,7 @@
         color: $color-grey-light-1; 
         text-transform: uppercase;
         letter-spacing: .2rem;
-        animation: moveInRight 4s 1s;
+        animation: moveInRight 4s 3s;
 
         @media only screen and (max-width: $bp-small) {
             font-size: 1.4rem;
@@ -96,43 +97,3 @@
         font-size: 1.3rem;
      }
 }
-
-// @media only screen and (max-width:$bp-medium) {
-//     .heading-primary {
-
-//         &--main {
-//             font-size: 1.8rem; 
-//             letter-spacing: .3rem;
-//         }
-    
-//         &--sub {
-//             font-size: 2.4rem;
-//         }
-//     }
-
-//     .heading-2 {
-//         font-size: 2rem;
-//         letter-spacing: .2rem;
-//     } 
-// }
-
-// @media only screen and (max-width:$bp-small) {
-//     .heading-primary {
-
-//         &--main {
-//             font-size: 1.4rem; 
-//             letter-spacing: .2rem;
-//             line-height: 1.9;
-//         }
-    
-//         &--sub {
-//             display: block;
-//             font-size: 1.6rem;
-//         }
-//     }
-
-//     .heading-2 {
-//         font-size: 2rem;
-//         letter-spacing: .2rem;
-//     } 
-// }
