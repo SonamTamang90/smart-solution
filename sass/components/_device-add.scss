@@ -38,9 +38,6 @@
 
     &__group {
         @include margin($bottom: $mb-md);
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
     }
 
     &__label {
