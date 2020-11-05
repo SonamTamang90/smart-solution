@@ -40,18 +40,18 @@ document.querySelector('#dropdown-panel').addEventListener('click', function(e) 
   showUserPanel();
 });
 
-// window.onclick = function(event) {
-//   if (!event.target.matches('.user-nav__button')) {
-//     let dropdowns = document.getElementsByClassName("dropdown-panel");
-//     let i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       let openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains('dropdown-show')) {
-//         openDropdown.classList.remove('dropdown-show');
-//       }
-//     }
-//   }
-// }
+window.onclick = function(event) {
+  if (!event.target.matches('.user-nav__button')) {
+    let dropdowns = document.getElementsByClassName("dropdown-panel");
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('dropdown-show')) {
+        openDropdown.classList.remove('dropdown-show');
+      }
+    }
+  }
+}
 
 
 /////////////////////////////////////////
