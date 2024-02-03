@@ -1,0 +1,1 @@
+This Smart Home Interface Template stands as a testament to pure ingenuity, meticulously crafted to unlock the full potential of SCSS, HTML, and JS. A unique creation, it represents a seamless fusion of cutting-edge technologies while upholding the esteemed BEM (Block, Element, Modifier) class naming standards.
